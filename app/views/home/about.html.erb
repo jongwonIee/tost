@@ -1,268 +1,490 @@
-<!--about-us -> about 으로 수정:컨트롤러에서(루비)about-us를 인식못함 -->
-<div class="htlfndr-loader-overlay single"></div>
 
-<div class="htlfndr-wrapper">
+[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]
+[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]
+[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]
+[if (gte IE 9)|!(IE)]><!
 
-	<!-- Start of main content -->
-		<div class="htlfndr-about-us">	
-			<main id="htlfndr-main-content" class=" htlfndr-main-content" role="main">	
-			<article>
-				<div class="h5 text-center text-uppercase">About us</div>
+<![endif]
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    [if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <!--GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--BOOTSTRAP MAIN STYLES -->
+    <link href="assets/stylesheets/bootstrap.css" rel="stylesheet" />
+    <!--FONTAWESOME MAIN STYLE -->
+    <link href="assets/stylesheets/font-awesome.css" rel="stylesheet" />
+    <!--PRETTYPHOTO MAIN STYLE -->
+    <link href="assets/stylesheets/prettyPhoto.css" rel="stylesheet" />
+    <!--CUSTOM STYLE -->
+    <link href="assets/stylesheets/style2.css" rel="stylesheet" />
+     <!--HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>-->
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <!--<![endif]-->-->
+</head>
 
-				<p class="text-center htlfndr-font-24"><i class="fa fa-users"></i></p>	
-				<h1 class="text-center">Out Creative Team</h1>
-				<hr>
-				<p class="small text-center">멋쟁이 사자처럼 4기</p>
-				<p class="small text-center">♡4기의 4팀♡</p>
-				<div class="row container">
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<div class="htlfndr-user-person-navigation">
-								<div class="htlfndr-user-avatar">
-									<img alt="user avatar" src="http://placehold.it/125x120">
-								</div>
-							<h3 class="htlfndr-user-name">조성국</h3>
-							<h6 class="htlfndr-user-membership">글로벌경영님</h6>
-							<p class="text-center"></p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<div class="htlfndr-user-person-navigation">
-								<div class="htlfndr-user-avatar">
-									<img alt="user avatar" src="http://placehold.it/125x120">
-								</div>
-							<h3 class="htlfndr-user-name">정유진</h3>
-							<h6 class="htlfndr-user-membership">문헌정보학</h6>
-							<p class="text-center"></p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<div class="htlfndr-user-person-navigation">
-								<div class="htlfndr-user-avatar">
-									<img alt="user avatar" src="http://placehold.it/125x120">
-								</div>
-							<h3 class="htlfndr-user-name">이종원</h3>
-							<h6 class="htlfndr-user-membership">글로벌경제</h6>
-							<p class="text-center"></p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<div class="htlfndr-user-person-navigation">
-								<div class="htlfndr-user-avatar">
-									<img alt="user avatar" src="http://placehold.it/125x120">
-								</div>
-							<h3 class="htlfndr-user-name">박찬준</h3>
-							<h6 class="htlfndr-user-membership">교육학과</h6>
-							<p class="text-center"></p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<div class="htlfndr-user-person-navigation">
-								<div class="htlfndr-user-avatar">
-									<img alt="user avatar" src="http://placehold.it/125x120">
-								</div>
-							<h3 class="htlfndr-user-name">이지연</h3>
-								<h6 class="htlfndr-user-membership">유학동양학</h6>
-							<p class="text-center"></p>
-						</div>
-					</div>
-				</div>
-					</div><!-- .htlfndr-contact_map -->
-	<div class="container">
-		<main id="htlfndr-contact-us" class="htlfndr-main-content" role="main">	
-			<div class="row htlfndr-contact-page">
-				<h1 class="text-center">Contact with Us</h1>
-				<div class="htlfndr-section-under-title-line"></div>
-				<div  class="row">
-					<div class="col-md-6">
-						<form action="#" id="htlfndr-contact-form" method="post">
-							<label for="contact-name" class="htlfndr-required htlfndr-top-label">Name</label>
-							<input id="contact-name" class="htlfndr-review-form-input" type="text" name="contact-name" required>
-							<label for="contact-email" class="htlfndr-required htlfndr-top-label">E-mail</label>
-							<input id="contact-email" class="htlfndr-review-form-input" type="email" name="contact-email" required>
-							<label for="contact-phone" class="htlfndr-required htlfndr-top-label">Phone number</label>
-							<input id="contact-phone" class="htlfndr-review-form-input" type="tel" pattern="[0-9]{10}" name="contact-phone" required>
-							<label for="contact-subject" class="htlfndr-required htlfndr-top-label">Subject</label>
-							<input id="contact-subject" class="htlfndr-review-form-input" type="text" name="contact-subject" required>
-							<label for="contact-message" class="htlfndr-required htlfndr-top-label">Message</label>
-							<textarea id="contact-message" class="htlfndr-review-form-input" name="contact-message"></textarea>
-							<input type="submit" value="Send your message" class="btn-primary">						
-						</form>
-					</div>
-					<div class="col-md-6">
-						<h3 class="htlfndr-font-24">Nice to hear You!</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum sollicitudin pellentesque. Duis id congue dolor. Sed at tortor sed magna gravida scelerisque ut maximus leo.</p>
-						<h3 class="htlfndr-font-24">Contact Information</h3>
-						<div class="contact-title">Business  Hours</div>
-						<p>Our support service works for you from Monday to Friday from 8 am to 18 pm<br>
-						Wait for our reply within 24 hours<br>
-						Saturday and Sunday: closed</p>
-						<div class="contact-title">Address</div>
-						<p>Hotel Finder<br>
-						120 CA 15th Avenue-Suite 214, USA
-						</p>
-						<div class="contact-title">Phone number</div>
-						<p>1-555-555-555</p>
-						<div class="contact-title">Email</div>
-						<p>info@testhotelfinder.com</p>
-					</div>
-				</div>
-			</div><!-- .row .htlfndr-contact-page -->
-		</main><!-- .htlfndr-hotel-single-content -->
-		</div><!-- .container -->
-	<!-- End of main content -->
+<body>
 
-	<!-- Start of the Footer -->
-	<footer class="htlfndr-footer">
-				
-				<div class="widget-wrapper">
-					<div class="container">
-						<div class="row">
-							<aside class="col-xs-12 col-sm-6 col-md-3 htlfndr-widget-column">
-								<div class="widget">
-									<a class="htlfndr-logo navbar-brand" href="#">
-										<img src="images/logo.png" height="20" width="30" alt="Logo" />
-										<p class="htlfndr-logo-text">hotel <span>finder</span></p>
-									</a>
-									<hr />
-									<p>Suspendisse sed sollicitudin nisl, at dignissim libero. Sed porta tincidunt ipsum, vel volutpat.</p>
-									<br />
-									<p>Nunc ut fringilla urna. Cras vel adipiscing ipsum. Integer dignissim nisl eu lacus interdum facilisis. Aliquam erat volutpat. Nulla</p>
-								</div><!-- .widget -->
-							</aside><!-- .col-xs-12.col-sm-6.col-md-3.htlfndr-widget-column -->
-							<aside class="col-xs-12 col-sm-6 col-md-3 htlfndr-widget-column">
-								<div class="widget">
-									<h3 class="widget-title">contact info</h3>
-									<h5>address</h5>
-									<p>Hotel Finder	<br />120 CA 15th Avenue-Suite 214, USA</p>
-									<hr />
-									<h5>phone number</h5>
-									<p>1-555-5555-5555</p>
-									<hr />
-									<h5>email address</h5>
-									<p>info@testhotelfinder.com</p>
-								</div><!-- .widget -->
-							</aside><!-- .col-xs-12.col-sm-6.col-md-3.htlfndr-widget-column -->
-							<aside class="col-xs-12 col-sm-6 col-md-3 htlfndr-widget-column">
-								<div class="widget">
-									<h3 class="widget-title">pages</h3>
-									<ul class="menu">
-										<li class="menu-item"><a href="index.html">home</a></li>
-										<li class="menu-item"><a href="elements.html">elements</a></li>
-										<li class="menu-item"><a href="blog-index.html">blog</a></li>
-										<li class="menu-item"><a href="about-us.html">about</a></li>
-										<li class="menu-item"><a href="user-page.html">user profile</a></li>
-									</ul>
-								</div><!-- .widget -->
-							</aside><!-- .col-xs-12.col-sm-6.col-md-3.htlfndr-widget-column -->
-							<aside class="col-xs-12 col-sm-6 col-md-3 htlfndr-widget-column">
-								<div class="widget">
-									<h3 class="widget-title">follow us</h3>
-									<!-- Start of Follow Us buttons -->
-									<div class="htlfndr-follow-plugin">
-										<a href="#" class="htlfndr-follow-button button-facebook"></a>
-										<a href="#" class="htlfndr-follow-button button-twitter"></a>
-										<a href="#" class="htlfndr-follow-button button-google-plus"></a>
-										<a href="#" class="htlfndr-follow-button button-linkedin"></a>
-										<a href="#" class="htlfndr-follow-button button-pinterest"></a>
-										<a href="#" class="htlfndr-follow-button button-youtube"></a>
-									</div><!-- .htlfndr-follow-plugin -->
-									<!-- End of Follow Us buttons -->
-									<hr />
-									<h3 class="widget-title">mailing list</h3>
-									<p>Sign up for our mailing list to get latest updates and offers</p>
-									<form>
-										<input type="email" placeholder="Your E-mail" />
-										<input type="submit" />
-									</form>
-								</div><!-- .widget -->
-							</aside><!-- .col-xs-12.col-sm-6.col-md-3.htlfndr-widget-column -->
-						</div><!-- .row -->
-					</div><!-- .container -->
-				</div><!-- .widget-wrapper -->
+    <!--END NAV SECTION -->
+    <!--SLIDE CAROUSEL SECTION -->
+    
+    <section id="pricing-section">
+        <div class="wrap-pad">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 " data-scrollreveal="enter top and move 100px, wait 0.5s">
+                    <div class="text-center">
+                        <h1><i class="fa fa-plane small-icons bk-color-blue"></i>How to use</h1>
+                        <p class="lead">
+                            헬취의 이용방법에 대해 알려드립니다.                       
+                        </p>
+                    </div>
+                </div>
+                <!-- ./ Heading div-->
+                <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 margin-top-100 ">
+                    <div id="pricing-table" class="row">
+                        <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.6s">
+                            <ul class="plan-main">
+                                <li class="plan-name" >STEP 01</li>
+                                <li>학원의 위치, 강좌의 정보, 시간을 설정합니다.</li>
+                                <li ><div class="a" alt=""><img src="/step1.jpg" width="150px"></div></li>
+                                <li ><div class="a" alt=""><img src="/1234.jpg" width="150px"></div></li>
+                                
+                            
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-4" data-scrollreveal="enter bottom and move 100px, wait 0.6s">
+                            <ul class="plan-main featured">
+                                <li class="plan-name">STEP 02</li>
+                                <li>검색하여, 강좌의 정보를 확인하세요.</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-4" data-scrollreveal="enter right and move 100px, wait 0.6s">
+                            <ul class="plan-main">
+                                <li class="plan-name">STEP 03</li>
+                                <li>링크를 통해, 강좌 정보를 확인하세요. 장바구니 기능을 통해 원하는 강좌 정보를 저장하세요.</li>
+                                <!--<li class="plan-action"><a href="#" class="btn btn-primary btn-lg">Signup</a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./ Content div-->
+            </div>
+        </div>
+    </section>
+    <!--<section id="slide-head" class="carousel">-->
+    <!--    <div class="carousel-inner">-->
+    <!--        <div class="item active">-->
+    <!--            <div class="container">-->
+    <!--                <div class="carousel-content">-->
+    <!--                    <h1>STEP 01</h1> 학원의 위치, 강좌의 정보, 시간을 설정합니다.-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+             <!--./ first active div-->
+    <!--        <div class="item">-->
+    <!--            <div class="container">-->
+    <!--                <div class="carousel-content">-->
+    <!--                    <h1>STEP 03</h1>검색하여, 강좌의 정보를 확인하세요.-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="item">-->
+    <!--            <div class="container">-->
+    <!--                <div class="carousel-content">-->
+    <!--                    <h1>STEP 02</h1>링크를 통해, 강좌 정보를 확인하세요. 장바구니 기능을 통해 원하는 강좌 정보를 저장하세요.-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+             <!--./ Second div-->
+    <!--    </div>-->
+    <!--    <a class="prev" href="#slide-head" data-slide="prev"><i class="fa fa-angle-left"></i></a>-->
+    <!--    <a class="next" href="#slide-head" data-slide="next"><i class="fa fa-angle-right"></i></a>-->
+    <!--</section>-->
+    
+    <!--END SLIDE CAROUSEL SECTION -->
 
-				<div class="htlfndr-copyright">
-					<div class="container" role="contentinfo">
-						<p>Copyright 2015 | BESTWEBSOFT | All Rights Reserved | Designed by BestWebSoft</p>
-					</div><!-- .container -->
-				</div><!-- .htlfndr-copyright -->
-			</footer>
-</div><!-- .htlfndr-wrapper -->
+    <!--END ABOUT SECTION -->
+    <!--SERVICES SECTION -->
+    <section id="about-section">
+        <div class="wrap-pad">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 " data-scrollreveal="enter top and move 100px, wait 0.5s">
+                    <div class="text-center">
+                        <h1><i class="fa fa-check small-icons bk-color-green"></i>Services</h1>
+                        <p class="lead">
+                           헬취란, '건강한 취업'을 뜻을 가진 말로써, 각 학원 사이트 마다 접속하여, 강좌를 검색했었던 불편함을 해결하기 위해 만들어 졌습니다.
+                           토익 학원 정보를 통합적으로 모아 제공해주여, 원하는 시간대의 강좌를 검색할 수 있습니다.              
+                        </p>
+                    </div>
+                </div>
+                <!-- ./ Heading div-->
+                <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 ">
+                    <div class="col-md-4 col-sm-6" data-scrollreveal="enter left and move 100px, wait 0.6s">
+                        <div class="text-center">
+                            <i class="fa fa-bolt icon-round bk-color-red"></i>
+                            <h4>검색의 편리성</h4>
+                            <p>
+                                기존 토익학원 선정 시, 여러 사이트를 접속하여 강좌 강의를 찾아보는 것과 다르게, 헬취 검색 한 번으로 여러 학원의
+                                강좌 정보를 검색할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <!--<div class="col-md-4 col-sm-6" data-scrollreveal="enter bottom and move 100px, wait 0.6s">-->
+                    <!--    <div class="text-center">-->
+                    <!--        <i class="fa fa-comments icon-round bk-color-black"></i>-->
+                    <!--        <h4>24x7 Support</h4>-->
+                    <!--        <p>-->
+                    <!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec enim sapien. Aliquam erat volutpat.-->
+                    <!--     Quisque eu ante at tortor imperdiet gravida nec sed turpis. Phasellus augue augue.-->
+                    <!--        </p>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    <div class="col-md-4 col-sm-6" data-scrollreveal="enter right and move 100px, wait 0.6s">
+                        <div class="text-center">
+                            <i class="fa fa-desktop icon-round bk-color-light-blue"></i>
+                            <h4>편리하고 단순한 디자인</h4>
+                            <p>
+                                보기 쉬운 디자인으로, 검색 기능 이용시 편리하게 이용할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <!--<div class="col-md-4 col-sm-6" data-scrollreveal="enter left and move 100px, wait 0.6s">-->
+                    <!--    <div class="text-center">-->
+                    <!--        <i class="fa fa-flask icon-round bk-color-green"></i>-->
+                    <!--        <h4>Tested Template</h4>-->
+                    <!--        <p>-->
+                    <!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec enim sapien. Aliquam erat volutpat.-->
+                    <!--     Quisque eu ante at tortor imperdiet gravida nec sed turpis. Phasellus augue augue.-->
+                    <!--        </p>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-4 col-sm-6" data-scrollreveal="enter bottom and move 100px, wait 0.6s">-->
+                    <!--    <div class="text-center">-->
+                    <!--        <i class="fa fa-pencil icon-round bk-color-blue"></i>-->
+                    <!--        <h4>Say Yes To Customize</h4>-->
+                    <!--        <p>-->
+                    <!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec enim sapien. Aliquam erat volutpat.-->
+                    <!--     Quisque eu ante at tortor imperdiet gravida nec sed turpis. Phasellus augue augue.-->
+                    <!--        </p>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    <div class="col-md-4 col-sm-6" data-scrollreveal="enter right and move 100px, wait 0.6s">
+                        <div class="text-center">
+                            <i class="fa fa-thumbs-up icon-round bk-color-brown"></i>
+                            <h4>내 강좌 찜하기 기능</h4>
+                            <p>
+                                자신이 원하는 강의를 찜해 장바구니에 담아 정보를 보관할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./ Content div-->
+            </div>
+        </div>
+    </section>
+    <!--END SERVICES SECTION -->
+    <!--PORTFOLIO SECTION -->
+    <!--<section id="portfolio-section">-->
+    <!--    <div class="wrap-pad">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 " data-scrollreveal="enter top and move 100px, wait 0.5s">-->
+    <!--                <div class="text-center">-->
+    <!--                    <h1><i class="fa fa-picture-o small-icons bk-color-light-blue"></i>Portfolio</h1>-->
+    <!--                    <p class="lead">-->
+    <!--                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec enim sapien. Aliquam erat volutpat.-->
+    <!--                     Quisque eu ante at tortor imperdiet gravida nec sed turpis. Phasellus augue augue.                        -->
+    <!--                    </p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+                <!-- ./ Heading div-->
+              
+    <!--            <div class="col-md-10 col-md-offset-1 col-sm-12" data-scrollreveal="enter right and move 100px, wait 0.6s">-->
+    <!--                <ul class="portfolio-items col-3">-->
+    <!--                    <li class="portfolio-item ">-->
+    <!--                        <div class="item-main">-->
+    <!--                            <div class="portfolio-image">-->
+    <!--                                <img src="assets/img/portfolio/thumb/t1.png" alt="">-->
+    <!--                                <div class="overlay">-->
+    <!--                                    <a class="preview btn btn-primary" title="Image Title Here" href="assets/img/portfolio/big/big1.png"><i class=" fa fa-eye"></i></a>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            <h5>Lorem ipsum dolor sit amet</h5>-->
+    <!--                        </div>-->
+    <!--                    </li>-->
+                       
+    <!--                    <li class="portfolio-item  ">-->
+    <!--                        <div class="item-main">-->
+    <!--                            <div class="portfolio-image">-->
+    <!--                                <img src="assets/img/portfolio/thumb/t3.png" alt="">-->
+    <!--                                <div class="overlay">-->
+    <!--                                    <a class="preview btn btn-primary" title="Image Title Here" href="assets/img/portfolio/big/big3.png"><i class=" fa fa-eye"></i></a>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            <h5>Lorem ipsum dolor sit amet</h5>-->
+    <!--                        </div>-->
+    <!--                    </li>-->
+    <!--                    <li class="portfolio-item   ">-->
+    <!--                        <div class="item-main">-->
+    <!--                            <div class="portfolio-image">-->
+    <!--                                <img src="assets/img/portfolio/thumb/t4.png" alt="">-->
+    <!--                                <div class="overlay">-->
+    <!--                                    <a class="preview btn btn-primary" title="Image Title Here" href="assets/img/portfolio/big/big4.png"><i class=" fa fa-eye"></i></a>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            <h5>Lorem ipsum dolor sit amet</h5>-->
+    <!--                        </div>-->
+    <!--                    </li>-->
+    <!--                    <li class="portfolio-item">-->
+    <!--                        <div class="item-main">-->
+    <!--                            <div class="portfolio-image">-->
+    <!--                                <img src="assets/img/portfolio/thumb/t5.png" alt="">-->
+    <!--                                <div class="overlay">-->
+    <!--                                    <a class="preview btn btn-primary" title="Image Title Here" href="assets/img/portfolio/big/big5.png"><i class=" fa fa-eye"></i></a>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            <h5>Lorem ipsum dolor sit amet</h5>-->
+    <!--                        </div>-->
+    <!--                    </li>-->
+    <!--                    <li class="portfolio-item">-->
+    <!--                        <div class="item-main">-->
+    <!--                            <div class="portfolio-image">-->
+    <!--                                <img src="assets/img/portfolio/thumb/t1.png" alt="">-->
+    <!--                                <div class="overlay">-->
+    <!--                                    <a class="preview btn btn-primary" title="Image Title Here" href="assets/img/portfolio/big/big1.png"><i class=" fa fa-eye"></i></a>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            <h5>Lorem ipsum dolor sit amet</h5>-->
+    <!--                        </div>-->
+    <!--                    </li>-->
+    <!--                    <li class="portfolio-item">-->
+    <!--                        <div class="item-main">-->
+    <!--                            <div class="portfolio-image">-->
+    <!--                                <img src="assets/img/portfolio/thumb/t2.png" alt="">-->
+    <!--                                <div class="overlay">-->
+    <!--                                    <a class="preview btn btn-primary" title="Image Title Here" href="assets/img/portfolio/big/big2.png"><i class=" fa fa-eye"></i></a>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            <h5>Lorem ipsum dolor sit amet</h5>-->
+    <!--                        </div>-->
+    <!--                    </li>-->
+    <!--                    <li class="portfolio-item">-->
+    <!--                       <div class="item-main">-->
+    <!--                            <div class="portfolio-image">-->
+    <!--                                <img src="assets/img/portfolio/thumb/t3.png" alt="">-->
+    <!--                                <div class="overlay">-->
+    <!--                                    <a class="preview btn btn-primary" title="Image Title Here" href="assets/img/portfolio/big/big3.png"><i class=" fa fa-eye"></i></a>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            <h5>Lorem ipsum dolor sit amet</h5>-->
+    <!--                        </div>-->
+    <!--                    </li>-->
+    <!--                    <li class="portfolio-item">-->
+    <!--                       <div class="item-main">-->
+    <!--                            <div class="portfolio-image">-->
+    <!--                                <img src="assets/img/portfolio/thumb/t4.png" alt="">-->
+    <!--                                <div class="overlay">-->
+    <!--                                    <a class="preview btn btn-primary" title="Image Title Here" href="assets/img/portfolio/big/big4.png"><i class=" fa fa-eye"></i></a>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            <h5>Lorem ipsum dolor sit amet</h5>-->
+    <!--                        </div>-->
+    <!--                    </li>-->
+    <!--                     <li class="portfolio-item">-->
+    <!--                        <div class="item-main">-->
+    <!--                            <div class="portfolio-image">-->
+    <!--                                <img src="assets/img/portfolio/thumb/t2.png" alt="">-->
+    <!--                                <div class="overlay">-->
+    <!--                                    <a class="preview btn btn-primary" title="Image Title Here" href="assets/img/portfolio/big/big2.png"><i class=" fa fa-eye"></i></a>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            <h5>Lorem ipsum dolor sit amet</h5>-->
+    <!--                        </div>-->
+    <!--                    </li>-->
+    <!--                </ul>-->
+    <!--            </div>-->
+                <!-- ./ Content div-->
+    <!--        </div>-->
+    <!--    </div>-->
 
-<div id="htlfndr-sing-up">
-	<div class="htlfndr-content-card">
-		<div class="htlfndr-card-title clearfix">
-			<h2 class="pull-left">Sing up</h2> 
-		</div>
-		<form id="htlfndr-sing-up-form" method="post">
-			<div class="row">
-				<div class="col-md-6">
-					<h4>first name</h4>
-					<input id="htlfndr-sing-up-name" class="htlfndr-input " type="text" name="htlfndr-sing-up-name">
-				</div>
-				<div class="col-md-6">
-					<h4>last name</h4>
-					<input id="htlfndr-sing-up-last-name" class="htlfndr-input " type="text" name="htlfndr-sing-up-last-name">
-				</div>
-			</div>
-			<h4>E-mail adress</h4>
-			<input id="htlfndr-sing-up-email" class="htlfndr-input " type="text" name="htlfndr-sing-up-email">
-			<h4>Password</h4>
-			<input id="htlfndr-sing-up-pass" class="htlfndr-input " type="text" name="htlfndr-sing-up-pass">
-			<h4>Confirm Password</h4>
-			<input id="htlfndr-sing-up-pass-conf" class="htlfndr-input " type="text" name="htlfndr-sing-up-pass-conf">
-			<div class="clearfix">
-			<span>Have an Account? 
-				<a data-target="#htlfndr-sing-in" data-toggle="modal" href="#">
-					<span>Sing in</span>
-				</a>
-			</span>
-			<input type="submit" value="Sing up" class="pull-right">
-			</div>
-		</form>
-	</div>
-</div>	
+    </section>
+    <!--END PORTFOLIO SECTION -->
+    <!--PRICING SECTION -->
+    
+    <!--END PRICING SECTION -->
+        <!--ABOUT SECTION -->
+    <section id="services-section">
+        <div class="wrap-pad">
+            <div class="row">
+                
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 ">
+                    <div class="text-center">
+                        <h1><i class="fa fa-wrench small-icons bk-color-brown"></i>Meet Team</h1>
+                        <p class="lead">
+                            멋쟁이 사자처럼
+                       
+                        </p>
+                    </div>
 
-<div id="htlfndr-sing-in">
-	<div class="htlfndr-content-card">
-		<div class="htlfndr-card-title clearfix">
-			<h2 class="pull-left">Sing in</h2> 
-		</div>
-		<form id="htlfndr-sing-in-form" method="post">
-			<h4>E-mail adress</h4>
-			<input id="htlfndr-sing-in-email" class="htlfndr-input " type="text" name="htlfndr-sing-in-emal">
-			<h4>Password</h4>
-			<input id="htlfndr-sing-in-pass" class="htlfndr-input " type="text" name="htlfndr-sing-in-pass">
-			<div class="clearfix">
-			<span>Don't Have an Account? 
-				<a data-target="#htlfndr-sing-up" data-toggle="modal" href="#">
-					<span>Sing up</span>
-				</a>
-			</span>
-			<input type="submit" value="Sing in" class="pull-right">
-			</div>
-		</form>
-	</div>
-</div>	
+                </div>
+                <!-- ./ Heading div-->
+                <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 margin-top-100  ">
+                <div id="jiyoni">
+                    <div class="col-md-4 col-sm-6" data-scrollreveal="enter left and move 100px, wait 0.6s" style="display:inline-block;vertical-align:middle">
+                        <div class="text-center">
+                            <p>
+                                <img class="img-responsive img-thumbnail img-circle" width="300px" height="300px"  src="/성국.png" alt="">
+                            </p>
+                            <h3>조성국</h3>
+                            <p>
+                                @gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-scrollreveal="enter bottom and move 100px, wait 0.6s" style="display:inline-block;vertical-align:middle">
+                        <div class="text-center">
+                            <p>
+                                <img class="img-responsive img-thumbnail img-circle" src="/유진.jpg" alt="">
+                            </p>
+                            <h3>정유진</h3>
+                            <p>
+                               @gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-scrollreveal="enter bottom and move 100px, wait 0.6s" style="display:inline-block;vertical-align:middle">
+                        <div class="text-center">
+                            <p>
+                                <img class="img-responsive img-thumbnail img-circle" src="/jiyoun.jpg" alt="">
+                            </p>
+                            <h3>이지연</h3>
+                            <p>
+                                jiyoni1225@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-scrollreveal="enter right and move 100px, wait 0.6s" style="display:inline-block;vertical-align:middle">
+                        <div class="text-center">
+                            <p>
+                                <img class="img-responsive img-thumbnail img-circle"  src="/종원.jpg" alt="">
+                            </p>
+                            <h3>이종원</h3>
+                            <p>
+                               @gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-scrollreveal="enter right and move 100px, wait 0.6s" style="display:inline-block;vertical-align:middle">
+                        <div class="text-center">
+                            <p>
+                                <img class="img-responsive img-thumbnail img-circle"  src="/찬준.jpg" alt="">
+                            </p>
+                            <h3>박찬준</h3>
+                            <p>
+                              @gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!-- ./ Content div-->
+            </div>
+        </div>
+    </section>
+    <!--CONTACT SECTION -->
+    <section id="contact-section">
+        <div class="wrap-pad">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 " data-scrollreveal="enter top and move 100px, wait 0.5s">
+                    <div class="text-center">
+                        <h1><i class="fa fa-tint small-icons bk-color-black"></i>Contact us Now</h1>
+                        <p class="lead">
+                            불편하신 점 문의해 주세요.                     
+                        </p>
+                    </div>
+                </div>
+                <!-- ./ Heading div-->
+                <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1  margin-top-20">
+                    <div class="col-md-6  col-sm-12" data-scrollreveal="enter left and move 100px, wait 0.6s">
+                        <h3><i class="fa fa-pencil small-icons bk-color-light-blue"></i>Send Us</h3>
+                        <hr />
+                        
+                       
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery-1.11.3.min.js"></script>
-<!-- Include Jquery UI script file -->
-<script src="js/jquery-ui.min.js"></script>
-<!-- Include Query UI Touch Punch is a small hack that enables the use
-		 of touch events on sites using the jQuery UI user interface library. -->
-<script src="js/jquery.ui.touch-punch.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
-<!-- Include Touch Menu Hover script file -->
-<script src="js/jquery.ui.touch-punch.min.js"></script>
-<!-- Include Owl Carousel script file -->
-<script src="js/owl.carousel.min.js"></script>
-<!-- Include main script file -->
-<script src="js/script.js"></script>
+                        <form method="EMAIL">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input name="title" type="text" class="form-control" required="required" id="exampleInputTitle1" placeholder="제목">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input name ="email" type="text" class="form-control" required="required" placeholder="작성자">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        <textarea name="content" required="required" class="form-control" rows="4" placeholder="내용"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <form action="/write" method="POST" style="background-color:rgba(255,255,255,0.4); padding-bottom: 40px; padding-top: 40px; padding-left:10px; padding-right:10px">
+                        <div class="form-group">
+                            <label for="address">TO.♡</label>
+                            <input name="address" type="email" class="form-control" id="exampleInputEmail1" placeholder="보내는 사람">
+                        </div>
+                        <div class="form-group">
+                            <label for="title">제목</label>
+                            <input name ="title" type="text" class="form-control" id="exampleInputEmail1" placeholder="제목">
+                        </div>
+                        <div class="form-group">
+                             <label for="content">내용</label>
+                             <textarea name="content" class="form-control" rows="5" id="comment" placeholder="내용을 입력해주세요"></textarea>
+                        </div>
+                      	<button type="submit" class="alert alert-danger" style="cursor:pointer" color="white" align="center">♡~화살을 쏩니다~♡</button>
+                    
+                	</form>
+                    <div class="col-md-4 col-md-offset-1  col-sm-12" data-scrollreveal="enter right and move 100px, wait 0.6s">
+                        
+                        <h3><i class="fa fa-comments small-icons bk-color-red"></i>Reach Us Here</h3>
+                        <hr />
+                        <p>성균관대학교 학생회관 208호</p><br />
+                    </div>
+                </div>
+                <!-- ./ Content div-->
+            </div>
+        </div>
+    </section>
+    <!--END CONTACT SECTION -->
+    
+    
+    <!--FOOTER SECTION -->
 
-<!--<script src="js/less.min.js" ></script> -->
-		
-			</div>
-		</form>
-	</div>
-</div>	
+    <!--END FOOTER SECTION -->
+     <!--JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+     <!--CORE JQUERY LIBRARY -->
+    <script src="assets/javascripts/jquery.js"></script>
+     <!--BOOTSTRAP SCRIPTS LIBRARY -->
+    <script src="assets/javascripts/bootstrap.min.js"></script>
+     <!--PRETTYPHOTO  SCRIPTS  LIBRARY-->
+    <script src="assets/javascripts/jquery.prettyPhoto.js"></script>
+      <!--SCROLL REVEL  SCRIPTS  LIBRARY-->
+    <script src="assets/javascripts/scrollReveal.js"></script>
+     <!--CUSTOM SCRIPT-->
+    <script src="assets/javascripts/custom.js"></script>
+</body>
+</html>

@@ -222,9 +222,9 @@ if (typeof jQuery === 'undefined') {
     }, this), 0)
   }
 
-  Button.prototype.toggle = function () {
+Button.prototype.toggle = function () {
     var changed = true
-    var $parent = this.$element.closest('[data-toggle="buttons"]')
+    var $parent = this.$element.closest('[data-toggle="htlfndr-sing-in"]')
 
     if ($parent.length) {
       var $input = this.$element.find('input')
@@ -915,6 +915,7 @@ if (typeof jQuery === 'undefined') {
   // MODAL CLASS DEFINITION
   // ======================
 
+
   var Modal = function (element, options) {
     this.options             = options
     this.$body               = $(document.body)
@@ -1187,7 +1188,6 @@ if (typeof jQuery === 'undefined') {
     return scrollbarWidth
   }
 
-
   // MODAL PLUGIN DEFINITION
   // =======================
 
@@ -1239,6 +1239,7 @@ if (typeof jQuery === 'undefined') {
   })
 
 }(jQuery);
+
 
 /* ========================================================================
  * Bootstrap: tooltip.js v3.3.4
@@ -2316,6 +2317,12 @@ if (typeof jQuery === 'undefined') {
 
 
 }(jQuery);
+
+
+/*href 대체*/
+function DoNav(url) {
+  document.location.href = url;
+}
 
 
 

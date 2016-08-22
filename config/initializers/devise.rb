@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '859b6c0011d56b10444a313c55643d6eba2c9505ca9acfb98d6d465c85a2378bc463d468345af11bf6017842447c391f6117586dafab954e8ade3ba7ceae3233'
+  # config.secret_key = '804bb82356b677be89344d89f912944fabee6f6d0d040b2ed068a4148947afeda9b111fdd60e6e161821f7337462411d6e9df561e2768af200412ca1d67e6c56'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -90,6 +90,12 @@ Devise.setup do |config|
   # from the server. You can disable this option at your own risk.
   # config.clean_up_csrf_token_on_authentication = true
 
+  # When false, Devise will not attempt to reload routes on eager load.
+  # This can reduce the time taken to boot the app but if your application
+  # requires the Devise mappings to be loaded during boot time the application
+  # won't boot properly.
+  # config.reload_routes = true
+
   # ==> Configuration for :database_authenticatable
   # For bcrypt, this is the cost for hashing the password and defaults to 11. If
   # using other algorithms, it sets how many times you want the password to be hashed.
@@ -102,7 +108,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'ac282dc49ad57b3ee35100543f442f19ce595e7e794bf580296de4109178f8771e35764b06f7a35f2856d29bbca158e35937f47d7781f77e6d4deb66a1508fb8'
+  # config.pepper = '5eb8e5ea6a042f32dbf28c958f1541716936f7d1f62de4941eaf057627c74a33a0b5305d50163a0bd6b823e22976e4cbc1f12a05ed48b4d0414dd3b2ef48c607'
 
   # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false
@@ -236,7 +242,7 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :delete
+  config.sign_out_via = :get
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting

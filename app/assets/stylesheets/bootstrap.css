@@ -9,7 +9,7 @@
 @import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
 
 html {
-  font-family: 'Noto Sans Korean', sans-serif;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -109,7 +109,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: 'Noto Sans Korean', sans-serif;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
   font-size: 1em;
 }
 button,
@@ -268,7 +268,7 @@ th {
   }
 }
 @font-face {
-  font-family: 'Noto Sans Korean', sans-serif;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
 
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
@@ -277,7 +277,7 @@ th {
   position: relative;
   top: 1px;
   display: inline-block;
-  font-family: 'Noto Sans Korean', sans-serif;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
   font-style: normal;
   font-weight: normal;
   line-height: 1;
@@ -1089,7 +1089,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'Noto Sans Korean', sans-serif;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
@@ -1099,7 +1099,7 @@ input,
 button,
 select,
 textarea {
-  font-family: 'Noto Sans Korean', sans-serif;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
   font-size: inherit;
   line-height: inherit;
 }
@@ -1137,8 +1137,12 @@ img {
 }
 .img-thumbnail {
   display: inline-block;
-  max-width: 100%;
-  height: auto;
+  width: 237px;
+  height: 247px;
+  
+  
+  /*max-width: 100%;*/
+  /*height: auto;*/
   padding: 4px;
   line-height: 1.42857143;
   background-color: #fff;
@@ -1191,7 +1195,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Noto Sans Korean', sans-serif;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -1232,6 +1236,8 @@ h3,
 .h3 {
   margin-top: 20px;
   margin-bottom: 10px;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+  font-weight: 300;
 }
 h1 small,
 .h1 small,
@@ -1246,6 +1252,8 @@ h2 .small,
 h3 .small,
 .h3 .small {
   font-size: 65%;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+  font-weight: 300;
 }
 h4,
 .h4,
@@ -1255,6 +1263,8 @@ h6,
 .h6 {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+  font-weight: 300;
 }
 h4 small,
 .h4 small,
@@ -1269,43 +1279,63 @@ h5 .small,
 h6 .small,
 .h6 .small {
   font-size: 75%;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+  font-weight: 300;
 }
 h1,
 .h1 {
   font-size: 36px;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+  font-weight: 300;
 }
 h2,
 .h2 {
   font-size: 30px;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+  font-weight: 300;
 }
 h3,
 .h3 {
   font-size: 24px;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+  font-weight: 300;
 }
 h4,
 .h4 {
   font-size: 18px;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+  font-weight: 300;
 }
 h5,
 .h5 {
   font-size: 14px;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+  font-weight: 300;
 }
 h6,
 .h6 {
   font-size: 12px;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+  font-weight: 300;
 }
 p {
   margin: 0 0 10px;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+  font-weight: 300;
 }
 .lead {
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.4;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   .lead {
     font-size: 21px;
+    font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+    font-weight: 300;
   }
 }
 small,
@@ -1529,7 +1559,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: 'Noto Sans Korean', sans-serif;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
 }
 
 code {
@@ -4078,6 +4108,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   height: 60px;
   margin-bottom: 20px;
   border: 1px solid transparent;
+  background: #6eccc3;
   transition: background-color .5s ease 0s;
   -webkit-transition: background .5s ease-in-out, opacity .5s ease;
   -moz-transition: background .5s ease-in-out, opacity .5s ease;
@@ -4454,14 +4485,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  border-color: #ddd;
+  border-color: #fff;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #ddd;
+  background-color: #fff;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #888;
+  background-color: #fff;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
@@ -5870,7 +5901,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: 'Noto Sans Korean', sans-serif;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5977,7 +6008,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: 'Noto Sans Korean', sans-serif;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -6241,7 +6272,7 @@ button.close {
   width: 20px;
   height: 20px;
   margin-top: -10px;
-  font-family: 'Noto Sans Korean', sans-serif;
+  font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
   line-height: 1;
 }
 .carousel-control .icon-prev:before {
@@ -6658,10 +6689,12 @@ button.close {
     z-index: 1000;
 }
 
-table {
-    border-collapse: collapse;
-}
+/*table {*/
+/*    border-collapse: collapse;*/
+/*}*/
 
-table, th, td {
-    border: 1px solid black;
-}
+/*table, th, td {*/
+/*    border: 1px solid black;*/
+/*}*/
+
+

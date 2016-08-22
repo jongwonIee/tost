@@ -5,25 +5,48 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Hellch | 헬취</title>
+	<title>TOST | 토스트</title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
-  <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+    <%= csrf_meta_tags %>
+
+    
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
 
 	<!-- Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/assets/bootstrap.css" rel="stylesheet" />
 	<!-- Main styles -->
-	<link href="css/style.css" rel="stylesheet" />
-	<!--<link rel="stylesheet/less" href="css/style.less" />-->
+	<link href="/assets/style.css" rel="stylesheet" />
+	<!--<link rel="stylesheet/less" href="/assets/style.less" />-->
 	<!-- IE styles -->
-	<link href="css/ie.css" rel="stylesheet" />
+	<link href="/assets/ie.css" rel="stylesheet" />
 	<!-- Font Awesome -->
-	<link href="css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/assets/font-awesome.css" rel="stylesheet" />
 	<!-- OWL Carousel -->
-	<link href="css/owl.carousel.css" rel="stylesheet" />
+	<link href="/assets/owl.carousel.css" rel="stylesheet" />
 	<!-- Jquery UI -->
-	<link href="css/jquery-ui.css" rel="stylesheet" />
-
+	<link href="/assets/jquery-ui.css" rel="stylesheet" />
+	<!--<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+    
+    <link href="/assets/checkbox.css" rel="stylesheet" />
+	<link href="/assets/index.css" rel="stylesheet" />
+	<link href="/assets/prettyPhoto.css" rel="stylesheet" />
+	<link href="/assets/about.css" rel="stylesheet" />
+	<link href="/assets/user-page.css" rel="stylesheet" />
+	
+	<!--font-->
+	<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+	<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
+	
+	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -31,9 +54,10 @@
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	
-	
 	<div class="htlfndr-wrapper">
 			<header>
+				
+				
 				<div class="htlfndr-top-header">
 					<div class="navbar navbar-default htlfndr-blue-hover-nav">
 						<div class="container">
@@ -45,7 +69,7 @@
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 								</button>
-								<a class="htlfndr-logo navbar-brand" href="/index">
+								<a class="htlfndr-logo navbar-brand" href="/home/index">
 									<img src="/assets/hellch_logo.png" alt="Logo" />
 								</a>
 							</div><!-- .navbar-header -->
@@ -53,21 +77,47 @@
 							<div class="collapse navbar-collapse navbar-right" id="htlfndr-first-nav">
 								<!-- List with sing up/sing in links -->
 								<ul class="nav navbar-nav htlfndr-singup-block">
-									<li id="htlfndr-singin-link">
-										<a href="/index"><span>HOME</span></a>
-									</li>
-									
-									<li id="htlfndr-singin-link">
-										<a href="#" data-toggle="modal" data-target="#htlfndr-sing-in"><span>로그인</span></a>
-									</li>
-									
-									<li id="htlfndr-singup-link">
-										<a href="#" data-toggle="modal" data-target="#htlfndr-sing-up"><span>회원가입</span></a>
-									</li>
-									
-									<li id="htlfndr-singin-link">
-										<a href="/about"><span>ABOUT</span></a>
-									</li>	
+									<% if current_user %> <!--로그인 한경우 -->
+										<li id="htlfndr-singin-link">
+											<a href="/home/index">
+												<span onclick="DoNav('/index')">HOME</span></a>
+										</li>
+										
+										<li id="htlfndr-singin-link">
+											<a href="/home/user-page">
+												<span onclick="DoNav('/user-page')">마이페이지</span></a>
+										</li>
+										
+										<li id="htlfndr-singin-link">
+											<a href="/home/about">
+												<span onclick="DoNav('/about')">ABOUT</span></a>
+										</li>
+				
+										<li id="htlfndr-singin-link">
+											<a href="/users/sign_out">
+												<span onclick="DoNav('/users/sign_out')">로그아웃</span></a>
+										</li>
+										
+									<% else %> <!--로그인 안한경우 -->
+										<li id="htlfndr-singin-link">
+											<a href="/home/index">
+												<span onclick="DoNav('/index')">HOME</span></a>
+										</li>
+										<li id="htlfndr-singin-link">
+											<a href="#" data-toggle="modal" data-target="#layerpop"><span>로그인</span></a>
+										</li>
+										
+										<li id="htlfndr-singup-link">
+											<a href="/users/sign_up">
+												<span onclick="DoNav('/users/sign_up')">회원가입</span></a>
+										</li>
+										
+										<li id="htlfndr-singin-link">
+											<a href="/home/about">
+												<span onclick="DoNav('/about')">ABOUT</span></a>
+										</li>
+										
+									<% end %>
 								</ul><!-- .htlfndr-singup-block -->					
 							</div><!-- .collapse.navbar-collapse -->
 						</div><!-- .container -->
@@ -75,18 +125,66 @@
 				</div><!-- .htlfndr-top-header -->
 				<noscript><h2>You have JavaScript disabled!</h2></noscript>
 			</header>
-	</div>	
+	</div>
 
+	
 	</head>
 	
 
 <body>
-
 	<%= yield %>
 	
+		<!--로그인-->
+<input class="btn btn-default" input type="hidden" data-target="#layerpop" data-toggle="modal"></button><br/>
+<div class="modal fade" id="layerpop" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- header -->
+      <div class="modal-header">
+        <!-- 닫기(x) 버튼 -->
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <!-- header title -->
+        <h4 class="modal-title">TOST 로그인</h4>
+      </div>
+      <!-- body -->
+      <div class="modal-body">
+         	<div class="form">
+		    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+		    <div class="field">
+		      <%= f.email_field :email, autofocus: true, :placeholder => "e-mail", :class =>"modal-field"%>
+		    </div>
+		    <div class="field">
+		      <%= f.password_field :password, autocomplete: "off", :placeholder => "password", :class =>"modal-field"%>
+		    </div>
+		    <div class="actions">
+		      <%= f.submit "로그인", :class => 'button'%>
+		      <% end %>
+		  	</div>
+		 </div>
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer" style="text-align:auto">
+        &nbsp;&nbsp;멋쟁이사자처럼X성균관대학교 4팀&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/users/sign_up"><span>회원가입</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+	<script src="/assets/jquery-1.11.3.min.js"></script>
+	<!-- Include Jquery UI script file -->
+	<script src="/assets/jquery-ui.min.js"></script>
+		
 	<!--common script for all pages / back to top-->
     <script src="/assets/common-scripts.js"></script>
-	   
+    <script src="/assets/bootstrap.js"></script>
+	<script src="/assets/custom.js"></script> 
+	<script src="/assets/owl.carousel.js"></script> 
+	<script src="/assets/script.js"></script>
+	<script src="/assets/scrollReveal.js"></script> 	
+	<script src="/assets/starrr.js"></script>
+	<script src="/assets/tinysort.js"></script> 
+	<script src="/assets/jquery.ui.touch-punch.min.js"></script>
 	<!-- Start of the Footer -->
 	<footer class="htlfndr-footer">
 				
