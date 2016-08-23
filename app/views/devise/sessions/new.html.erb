@@ -1,84 +1,18 @@
   <!--로그인 페이지!-->
-<style>
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
-.login-page {
-  width: 100%;
-  height:100%;
-  padding: 9% 0 0;
-  margin: auto;
-}
-.form {
-  font-family: "Roboto", sans-serif;
-  position: relative;
-  z-index: 1;
-  background: #FFFFFF;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 60px;
-  /*text-align: center;*/
-}
-.input {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-.button{
-    font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background: #00c9b5;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-}
-.button:hover,
-.button:active,
-.button:focus {
-  opacity:0.6;
-  color:#ffffff;
-}
-.form .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px;
-}
-.form .message a {
-  color: #4CAF50;
-  text-decoration: none;
-}
-.form .register-form {
-  display: none;
-}
-.img2{
-  position:center;
-  padding-right:30px;
-  margin:20px;
-  width:90%;
-}  
-</style>
-  <!--로그인 페이지!-->
 <body style="background-color:#ffffff">
 <div class="month-graph">
   <div class="login-page">
-    <div class="form">
+    <div class="sign_in-form">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= flash[:alert] %>
     <div class="field">
       <%= f.email_field :email, autofocus: true, :class => 'input', :placeholder => "e-mail"%>
     </div>
+    
     <div class="field">
       <%= f.password_field :password, autocomplete: "off", :class => 'input', :placeholder => "password"%>
     </div>
+    
     <div class="actions">
       <%= f.submit "로그인", :class => 'button'%>
     </div>
@@ -95,10 +29,6 @@
   <%= render "devise/shared/links" %>
 </div>    
 </div>
-
 </div>
-
-
-
 </div>
 </body> 
