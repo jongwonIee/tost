@@ -99,8 +99,8 @@ pre {
     background: #fff none repeat scroll 0 0;
     border: 1px solid #37e1f8;
     color: #08c1da;
-    padding-left: 16px;
-    padding-right: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
     text-transform: none
 }
 .btn-default:hover,
@@ -7539,7 +7539,9 @@ only screen and (min-resolution:1.3dppx) {
     background: #FFFFFF;
     max-width: 400px;
     margin: 0 auto;
-    padding: 60px;
+    margin-top:1px;
+    margin-left: 4.2rem;
+     padding: 60px;
     /*text-align: center;*/
 }
 /*회원가입 페이지-성국-*/
@@ -7558,7 +7560,7 @@ only screen and (min-resolution:1.3dppx) {
     background: #FFFFFF;
     max-width: 400px;
     margin:  auto;
-    padding: 55px;
+    padding: 50px;
 }
 .sign_up-form {
     font-family: "Roboto", sans-serif;

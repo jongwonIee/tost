@@ -29,6 +29,7 @@ class Post < ActiveRecord::Base
                         else
                             
                 			  Post.create(
+                			             # lec_id: 
                 			             # type: type,
                 			              aca: aca,
                 			             # price: price,

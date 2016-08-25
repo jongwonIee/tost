@@ -18,6 +18,21 @@ class HomeController < ApplicationController
     end
     
   end
+  
+  def user_page
+    @lectures = Post.all
+    
+    #찜하기 기능
+    if params[:type] == "wish"
+      current_user.follow(Post.find(params[:lecture_id]))
+      redirect_to :back
+
+    elsif params[:type] == "unwish"
+      current_user.stop_following(Post.find(params[:lecture_id]))
+      redirect_to :back
+    end
+  end
+    
   # def about
   #   @title = params[:title]
   #   @receiver = params[:email]
@@ -38,7 +53,7 @@ class HomeController < ApplicationController
   # end
       def write
         @title = params[:title]
-       @address =  params[:address]
+        @receiver =  params[:email]
         @content = params[:content]
         mg_client = Mailgun::Client.new("key-5c1dde76bef60438458d6afe28c6405c")
         message_params =  {
@@ -51,11 +66,11 @@ class HomeController < ApplicationController
         result = mg_client.send_message('sandbox0483375709ed4b5aa15e77d809433a11.mailgun.org', message_params).to_h!
         message_id = result['id']
         message = result['message']
-        new_post = Post.new
-        new_post.title = @title
-        new_post.content = @content
+        # new_post = Post.new
+        # new_post.title = @title
+        # new_post.content = @content
    #     new_post.email = @address
-        new_post.save
+        # new_post.save
         # redirect_to '/abou'
     end
     

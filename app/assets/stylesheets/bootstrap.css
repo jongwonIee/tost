@@ -6697,4 +6697,7 @@ button.close {
 /*    border: 1px solid black;*/
 /*}*/
 
-
+.row2 {
+    margin-right: 0px;
+    margin-left: 0px;
+}

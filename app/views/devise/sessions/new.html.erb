@@ -4,7 +4,7 @@
   <div class="login-page">
     <div class="sign_in-form">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <%= flash[:alert] %>
+     <div style ="text-align:center"> <%= flash[:alert] %></div> 
     <div class="field">
       <%= f.email_field :email, autofocus: true, :class => 'input', :placeholder => "e-mail"%>
     </div>

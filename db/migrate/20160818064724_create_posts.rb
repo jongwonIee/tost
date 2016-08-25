@@ -2,6 +2,7 @@ class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |t|
       
+      # t.string :lec_id
       t.string :type
       t.string :aca
       t.string :day

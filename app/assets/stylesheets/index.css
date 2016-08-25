@@ -205,26 +205,32 @@ img.zzim_heart {
 }
 
 
+/*q-popltip*/
 
-	a.too {
+	.q-pop {
 		position: relative;
 		display: inline;
+		color: #f96931;
+		cursor: pointer;
 	}
 	
-	a.too span {
+	.q-pop span {
 		position: absolute;
 		left: 50%;
 		width:140px;
 		padding: 6px;
-		margin-left: -76px;
+		margin-left: -71px;
 		background: #000;
-		color: blue;
+		color: white;
+		font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+        font-weight: 500;
+		font-size:18px;
 		text-align: center;
 		visibility: hidden;
 		border-radius: 5px;
 	} 
 			
-	a.too span:after {
+	.q-pop span:after {
 		content: '';
 		position: absolute;
 		top: 100%;
@@ -236,9 +242,13 @@ img.zzim_heart {
 		border-left: 8px solid transparent;
 	}
 			
-	a:hover.too span {
+	.q-pop:hover.q-pop span {
 		visibility: visible;
 		opacity: 0.8;
 		bottom: 30px;
 		z-index: 999;
 	}
+	
+	
+	
+	

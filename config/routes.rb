@@ -6,11 +6,13 @@ Rails.application.routes.draw do
   get 'about' => 'home#about'
   get 'contact-us' => 'home#contact-us'
   get 'search' => 'home#search-result'
-  get 'abuu' => 'home#abuu'
+  get 'about1' => 'home#about1'
   get 'index3' => 'home#index3'
   post '/write' => 'home#write'
   get 'list' => 'home#list'
-  get 'user-page' => 'home#user-page'
+  get 'user_page' => 'home#user_page'
+  
+  get 'user' => 'home#user-test'
   
   
   get ':controller(/:action(/:id))'

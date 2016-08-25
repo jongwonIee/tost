@@ -16,7 +16,8 @@
 	
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	
+	<link rel="stylesheet" href="assets/stylesheets/glide.core.css">
+    <link rel="stylesheet" href="assets/stylesheets/glide.theme.css">
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
@@ -84,8 +85,8 @@
 										</li>
 										
 										<li id="htlfndr-singin-link">
-											<a href="/home/user-page">
-												<span onclick="DoNav('/user-page')">마이페이지</span></a>
+											<a href="/home/user_page">
+												<span onclick="DoNav('/user_page')">마이페이지</span></a>
 										</li>
 										
 										<li id="htlfndr-singin-link">
@@ -150,7 +151,7 @@
       <div class="modal-body">
          	<div class="form">
 		    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-		      <%= flash[:alert] %>
+		    <div style ="text-align:center"> <%= flash[:alert] %></div> 
 		    <div class="field">
 		      <%= f.email_field :email, autofocus: true, :placeholder => "e-mail", :class =>"modal-field"%>
 		    </div>
@@ -165,8 +166,8 @@
       </div>
       <!-- Footer -->
       <div class="modal-footer" style="text-align:auto">
-        &nbsp;&nbsp;멋쟁이사자처럼X성균관대학교 4팀&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/users/sign_up"><span>회원가입</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+        <div >멋쟁이사자처럼X성균관대학교 4팀 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/users/sign_up"><span>회원가입</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button></div>
       </div>
     </div>
   </div>
@@ -186,6 +187,7 @@
 	<script src="/assets/starrr.js"></script>
 	<script src="/assets/tinysort.js"></script> 
 	<script src="/assets/jquery.ui.touch-punch.min.js"></script>
+	<script src="/assets/javascripts/jquery.glide.js"></script>
 	<!-- Start of the Footer -->
 	<footer class="htlfndr-footer">
 				
