@@ -5,30 +5,30 @@ class HomeController < ApplicationController
   end
   
   def index
-    @lectures = Post.all
+    @hackers = Hacker.all
     
     #찜하기 기능
     if params[:type] == "wish"
-      current_user.follow(Post.find(params[:lecture_id]))
+      current_user.follow(Hacker.find(params[:lecture_id]))
       redirect_to :back
 
     elsif params[:type] == "unwish"
-      current_user.stop_following(Post.find(params[:lecture_id]))
+      current_user.stop_following(Hacker.find(params[:lecture_id]))
       redirect_to :back
     end
     
   end
   
   def user_page
-    @lectures = Post.all
+    @hackers = Hacker.all
     
     #찜하기 기능
     if params[:type] == "wish"
-      current_user.follow(Post.find(params[:lecture_id]))
+      current_user.follow(Hacker.find(params[:lecture_id]))
       redirect_to :back
 
     elsif params[:type] == "unwish"
-      current_user.stop_following(Post.find(params[:lecture_id]))
+      current_user.stop_following(Hacker.find(params[:lecture_id]))
       redirect_to :back
     end
   end

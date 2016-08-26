@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>TOST | 토스트</title>
+	<title>tost | 토스트</title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
     <%= csrf_meta_tags %>
@@ -71,7 +71,7 @@
 									<span class="icon-bar"></span>
 								</button>
 								<a class="htlfndr-logo navbar-brand" href="/home/index">
-									<img src="/assets/hellch_logo.png" alt="Logo" />
+									<img src="/assets/tost_logo.gif" alt="Logo" />
 								</a>
 							</div><!-- .navbar-header -->
 							<!-- Collect the nav links, forms, and other content for toggling -->
@@ -150,8 +150,9 @@
       <!-- body -->
       <div class="modal-body">
          	<div class="form">
+
 		    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-		    <div style ="text-align:center"> <%= flash[:alert] %></div> 
+		    	<div style ="text-align:center"><%= flash[:alert] %></div> 
 		    <div class="field">
 		      <%= f.email_field :email, autofocus: true, :placeholder => "e-mail", :class =>"modal-field"%>
 		    </div>

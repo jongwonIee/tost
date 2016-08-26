@@ -253,16 +253,7 @@ label {
 .switch-label-check input[type="checkbox"]:disabled+.switch {
     background-color: #e7e7e7
 }
-input[type="checkbox"]+span {
-    border-radius: 4px;
-    background-color: #ffffff;
-    border: 1px solid #6eccc3;
-    display: block;
-    height: 16px;
-    position: relative;
-    width: 16px
-}
-input[type="radio"]+span {
+.search_select input[type="radio"]+span {
     border: 1px solid #08c1da;
     border-radius: 50%;
     display: block;
@@ -270,10 +261,22 @@ input[type="radio"]+span {
     position: relative;
     width: 20px
 }
-input[type="checkbox"]:checked+span {
-    background-color: #6eccc3
+
+/*검색 체크박스 */
+
+.search_select_1 input[type="checkbox"]+span {
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: 1px solid #fcb0ac;
+    display: block;
+    height: 16px;
+    position: relative;
+    width: 16px
 }
-input[type="checkbox"]:checked+span:after {
+.search_select_1 input[type="checkbox"]:checked+span {
+    background-color: #fcb0ac;
+}
+.search_select_1 input[type="checkbox"]:checked+span:after {
     color: #fff;
     content: '\f00c';
     font-family: 'Spoqa Han Sans', 'FontAwesome';
@@ -282,6 +285,77 @@ input[type="checkbox"]:checked+span:after {
     position: absolute;
     top: -1px
 }
+
+.search_select_2 input[type="checkbox"]+span {
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: 1px solid #6bcec4;
+    display: block;
+    height: 16px;
+    position: relative;
+    width: 16px
+}
+.search_select_2 input[type="checkbox"]:checked+span {
+    background-color: #6bcec4;
+}
+.search_select_2 input[type="checkbox"]:checked+span:after {
+    color: #fff;
+    content: '\f00c';
+    font-family: 'Spoqa Han Sans', 'FontAwesome';
+    font-size: 66%;
+    margin-left: 1px;
+    position: absolute;
+    top: -1px
+}
+
+.search_select_3 input[type="checkbox"]+span {
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: 1px solid #a6de81;
+    display: block;
+    height: 16px;
+    position: relative;
+    width: 16px
+}
+.search_select_3 input[type="checkbox"]:checked+span {
+    background-color: #a6de81;
+}
+.search_select_3 input[type="checkbox"]:checked+span:after {
+    color: #fff;
+    content: '\f00c';
+    font-family: 'Spoqa Han Sans', 'FontAwesome';
+    font-size: 66%;
+    margin-left: 1px;
+    position: absolute;
+    top: -1px
+}
+
+.search_select_4 input[type="checkbox"]+span {
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: 1px solid #fff250;
+    display: block;
+    height: 16px;
+    position: relative;
+    width: 16px
+}
+.search_select_4 input[type="checkbox"]:checked+span {
+    background-color: #fff250;
+}
+.search_select_4 input[type="checkbox"]:checked+span:after {
+    color: #fff;
+    content: '\f00c';
+    font-family: 'Spoqa Han Sans', 'FontAwesome';
+    font-size: 66%;
+    margin-left: 1px;
+    position: absolute;
+    top: -1px
+}
+
+
+
+/*끝*/
+
 input[type="radio"]:checked+span:after {
     content: '';
     position: absolute;

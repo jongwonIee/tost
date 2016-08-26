@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160822062605) do
+ActiveRecord::Schema.define(version: 20160825040621) do
 
   create_table "emails", force: :cascade do |t|
     t.string   "title"
@@ -34,17 +34,18 @@ ActiveRecord::Schema.define(version: 20160822062605) do
   add_index "follows", ["followable_id", "followable_type"], name: "fk_followables"
   add_index "follows", ["follower_id", "follower_type"], name: "fk_follows"
 
-  create_table "posts", force: :cascade do |t|
-    t.string   "type"
-    t.string   "aca"
+  create_table "hackers", force: :cascade do |t|
     t.string   "day"
-    t.string   "time"
-    t.string   "week"
     t.string   "title"
     t.string   "link"
     t.string   "teacher"
     t.string   "price"
-    t.string   "level"
+    t.integer  "loc"
+    t.integer  "time"
+    t.integer  "week"
+    t.integer  "level"
+    t.integer  "subject"
+    t.integer  "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -53,6 +54,10 @@ ActiveRecord::Schema.define(version: 20160822062605) do
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "username"
+    t.string   "toeic_score"
+    t.string   "toefl_score"
+    t.string   "teps_score"
+    t.string   "tos_level"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
