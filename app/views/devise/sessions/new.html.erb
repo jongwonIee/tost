@@ -1,15 +1,17 @@
   <!--로그인 페이지!-->
 <body style="background-color:#ffffff">
 <div class="month-graph">
-  <div class="login-page">
+  <div class="sign_in_login-page">
     <div class="sign_in-form">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
      <div style ="text-align:center"> <%= flash[:alert] %></div> 
     <div class="field">
+      아이디
       <%= f.email_field :email, autofocus: true, :class => 'input', :placeholder => "e-mail"%>
     </div>
     
-    <div class="field">
+    <div class="field" style="padding-bottom:12px">
+      비밀번호
       <%= f.password_field :password, autocomplete: "off", :class => 'input', :placeholder => "password"%>
     </div>
     

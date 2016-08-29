@@ -5,6 +5,9 @@ class HomeController < ApplicationController
   end
   
   def index
+  end
+  
+  def index_all
     @hackers = Hacker.all
     
     #찜하기 기능
@@ -16,6 +19,32 @@ class HomeController < ApplicationController
       current_user.stop_following(Hacker.find(params[:lecture_id]))
       redirect_to :back
     end
+    #hi
+  end
+  
+  def index_result
+    if params[:level] == 1 or params[:level] == 2 or params[:level] == 3
+      level = 1
+    elsif params[:level] == 4 or params[:level] == 5
+      level = 2
+    else
+      level = 3
+    end
+    @filtered_hackers = Hacker.where("subject In (?) and loc In (?) and week In (?) and level In (?)",
+    params[:subject], params[:loc], params[:week], level)
+    
+    
+    #찜하기 기능
+    if params[:type] == "wish"
+      current_user.follow(Hacker.find(params[:lecture_id]))
+      redirect_to :back
+
+    elsif params[:type] == "unwish"
+      current_user.stop_following(Hacker.find(params[:lecture_id]))
+      redirect_to :back
+    end
+    
+    # redirect_to "/home/index_result"
     
   end
   

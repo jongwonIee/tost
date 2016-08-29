@@ -5,10 +5,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
       t.string :username
-      t.string :toeic_score
-      t.string :toefl_score
-      t.string :teps_score
-      t.string :tos_level
+      t.string :toeic_score, default: "-"
+      t.string :toefl_score, default: "-"
+      t.string :teps_score, default: "-"
+      t.string :tos_level, default: "-"
 
       ## Recoverable
       t.string   :reset_password_token

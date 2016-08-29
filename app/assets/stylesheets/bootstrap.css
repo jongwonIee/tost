@@ -5815,15 +5815,21 @@ button.close {
 }
 .modal-content {
   position: relative;
+  vertical-align: middle;
+  text-align: middle;
+  padding: 1em;
+  display: table;
   background-color: #fff;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, .2);
-  border-radius: 6px;
+  border-radius: 15px;
+  width: 100%;
   outline: 0;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
           box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+  margin-top: 150px;
 }
 .modal-backdrop {
   position: fixed;
@@ -5844,7 +5850,7 @@ button.close {
 }
 .modal-header {
   min-height: 16.42857143px;
-  padding: 15px;
+  padding: 5px;
   border-bottom: 1px solid #e5e5e5;
 }
 .modal-header .close {
@@ -5856,10 +5862,10 @@ button.close {
 }
 .modal-body {
   position: relative;
-  padding: 15px;
+  padding: 20px;
 }
 .modal-footer {
-  padding: 15px;
+  padding: 12px;
   text-align: right;
   border-top: 1px solid #e5e5e5;
 }
@@ -6678,7 +6684,7 @@ button.close {
 
 #back-to-top:hover {
 
-    background-color:#6eccc3;
+    background-color:#75ddd2;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
     filter: alpha(opacity=80);
     opacity:0.8;

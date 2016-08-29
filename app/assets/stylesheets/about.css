@@ -71,25 +71,25 @@
     color:#000000;
 }
 .bk-color-red {
-    background-color:#ff0000;
+    background-color:#333;
 }
 
 .bk-color-green {
-    background-color:#07BB00;
+    background-color:#333;
 }
 
 .bk-color-light-blue {
-    background-color:#BB00BB;
+    background-color:#333;
 }
 
 .bk-color-blue {
-    background-color:#0052FF;
+    background-color:#333;
 }
 .bk-color-brown {
-    background-color:#EB8F2D;
+    background-color:#333;
 }
 .bk-color-black {
-   background-color:#000000;
+   background-color:#333;
 }
 
 .margin-5 {
@@ -302,6 +302,8 @@ background-color: rgb(19, 170, 74);
   color: #fff;
   font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
   font-weight: 300;
+ 
+	font-weight: bold;
 }
  /* Smooth Animation */ 
 @keyframes scaleUp {

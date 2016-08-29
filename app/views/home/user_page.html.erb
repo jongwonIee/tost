@@ -9,9 +9,7 @@
 				
 				<div class="htlfndr-user-person-navigation-wrapper col-sm-4 col-md-3">
 					<div class="htlfndr-user-person-navigation">
-						<div class="htlfndr-user-avatar">
-							<img src="http://placehold.it/130x130" alt="user avatar"/>
-						</div>
+						
 						<h3 class="htlfndr-user-name"><%= current_user.username %></h3>
 						<% if current_user.sign_in_count < 10 %>
 							<h6 class="htlfndr-user-membership">Bronze</h6>
@@ -44,7 +42,7 @@
 						<div class="row htlfndr-counters">
 							<div class="col-md-3 col-sm-6">
 								<div class="htlfndr-counter-block">
-										<div class="htlfndr-icon-holder">
+										<div class="htlfndr-icon-holder1">
 												<h2 class='test_type'>TOEIC</h2>
 											<!--<i class="fa fa-plane"></i>-->
 										</div>
@@ -56,40 +54,41 @@
 							</div>
 							<div class="col-md-3 col-sm-6">
 								<div class="htlfndr-counter-block">
-									<div class="htlfndr-icon-holder">
+									<div class="htlfndr-icon-holder2">
 										<h2 class='test_type'>TOEFL</h2>
 										<!--<i class="fa fa-building-o"></i>-->
 									</div>
 									<dl class="htlfndr-counter-numbers">
-										<dt class="htlfndr-count">103</dt>
+										<dt><%=current_user.toefl_score%></dt>
 										<dd>score</dd>
 									</dl>
 								</div><!-- .htlfndr-counter-block -->
 							</div>
 							<div class="col-md-3 col-sm-6">
 								<div class="htlfndr-counter-block">
-									<div class="htlfndr-icon-holder">
+									<div class="htlfndr-icon-holder3">
 										<h2 class='test_type'>TEPS</h2>
 										<!--<i class="fa fa-globe"></i>-->
 									</div>
 									<dl class="htlfndr-counter-numbers">
-										<dt class="htlfndr-count">793</dt>
+										<dt><%= current_user.teps_score%></dt>
 										<dd>score</dd>
 									</dl>
 								</div><!-- .htlfndr-counter-block -->
 							</div>
 							<div class="col-md-3 col-sm-6">
 								<div class="htlfndr-counter-block">
-									<div class="htlfndr-icon-holder">
+									<div class="htlfndr-icon-holder4">
 										<h2 class='test_type'>토스</h2>
 										<!--<i class="fa fa-map-marker"></i>-->
 									</div>
 									<dl class="htlfndr-counter-numbers">
-										<dt class="htlfndr-count">5</dt>
+										<dt><%=current_user.tos_level%></dt>
 										<dd>level</dd>
 									</dl>
 								</div><!-- .htlfndr-counter-block -->
 							</div>
+							<p><a href = "#htlfndr-user-tab-3", class = "move_a">setting 페이지로 이동해 점수를 입력해보세요</a></p>
 						</div><!-- .row.htlfndr-counters -->
 					<!--</div>-->
 					
@@ -253,43 +252,83 @@
 				</div><!-- .htlfndr-user-tabs-4-->
 				
 				<div class="htlfndr-user-panel col-md-8 col-sm-8 htlfndr-setting-page" id="htlfndr-user-tab-3">
-					<div class="htlfndr-setting">
+					<div class="htlfndr-setting" style = "display: inlne-block;">
 						<h2>Change <b>Personal Infomation</b></h2>
-						<!--<form class="htlfndr-form-setting" id="htlfndr-settings-form" action='/home/user_page' method="post">-->
 							<div class="row2">
-									<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-									  <%= f.error_notification %>
+								<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+								<%= f.error_notification %>
 									
-									  <div class="form-inputs">
+									<div class="form-inputs">
 									  	
+									  	<div class="col-md-6 htlfndr-form-setting-cols">
+										    <div class = "user_field">
+										    Username
+										    <%= f.text_field :username, :class => "htlfndr-input"%><br/>
+										    </div>
+										    
+										    <div class = "user_field">
+										    Password(선택)
+										    <%= f.password_field :password, :class => "htlfndr-input", required: false%><br/> 
+										    </div>
+										    
+										    <div class = "user_field">
+										    Password Confirmation(선택)
+										    <%= f.password_field :password_confirmation, :class => "htlfndr-input", required: false%><br/>
+										    </div>
+										    
+										    <div class = "user_field">
+										    Current Password(필수입력)
+										    <%= f.password_field :current_password, :class => "htlfndr-input", required: true %><br/>
+										    </div>
+								 		</div>
 									    
-									    <div class = "field">
-									    <%= f.label :Username %> <br/>
-									    <%= f.text_field :username, :class => "htlfndr-input"%>
-									    </div>
-									    
-									    
-    									<%= f.input :toeic_score, required: true %>
-									    
-									    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-									      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-									    <% end %>
+									    <div class="col-md-6 htlfndr-form-setting-cols">
+										    <div class = "user_field">
+										    TOEIC
+										    <%= f.text_field :toeic_score, :class => "htlfndr-input", required: false %><br/>
+										    </div>
+										    
+										    <div class = "user_field">
+										    TOEFL
+										    <%= f.text_field :toefl_score, :class => "htlfndr-input", required: false %><br/>
+										    </div>
+										    
+										    <div class = "user_field">
+										    TEPS
+										    <%= f.text_field :teps_score, :class => "htlfndr-input", required: false %><br/>
+										    </div>
+										    
+										    <div class = "user_field">
+										    TOEIC Spaeking
+										    <%= f.text_field :tos_level, :class => "htlfndr-input", required: false %><br/>
+										    </div>
+									</div>
 									
-									    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
-									    <%= f.input :password_confirmation, required: false %>
-									    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
-									  </div>
+								<div class="col-md-12 form-actions">
+								<%= f.button :submit, "Update", :class => "btn-primary"  %>
+								</div>
+								<hr>
+							</div>
+								
+								
+								
+								<h2>Cancel <b>Account</b></h2>	
+								<div style = "float: right">
+								<%= link_to "CANCLE MY ACCOUNT", registration_path(resource_name), data: { confirm: "Are you sure?" },
+								method: :delete, :class => "cancle_account" %>
+								<%#= link_to "Back", :back %>	
+								</div>
+						<% end %>
+					</div>
+				</div>
+				
+				
+				
+				
+										
+										
+								
 									
-									  <div class="form-actions">
-									    <%= f.button :submit, "Update" %>
-									  </div>
-									<% end %>
-									
-									<h3>Cancel my account</h3>
-									
-									<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-									
-									<%= link_to "Back", :back %>
 								<!--이하의 코드는 원래 템플릿에 적용되던 html-->
 								<!--<div class="col-md-5 htlfndr-form-setting-cols">-->
 								<!--	<label for="settings-name" class="">Name</label><br>-->
@@ -307,7 +346,7 @@
 								<!--	<label for="settings-city" class="">TOEIC SEPAKING</label><br>-->
 								<!--	<input id="settings-city" class="htlfndr-input" type="text" name="settings-city" placeholder="LEVEL"><br>-->
 								<!--</div>-->
-							</div>
+							<!--</div>-->
 							<!--<input type="submit" value="Save changes" class="btn-primary">						-->
 						<!--</form>-->
 						

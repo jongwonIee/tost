@@ -6,6 +6,8 @@
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title>tost | 토스트</title>
+	<link rel="shortcut icon" href="http://www.yoursite.com/favicon.ico?v=2">
+	<link rel="icon" sizes="16x16 32x32" href="/mini_t.gif">
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
     <%= csrf_meta_tags %>
@@ -71,7 +73,7 @@
 									<span class="icon-bar"></span>
 								</button>
 								<a class="htlfndr-logo navbar-brand" href="/home/index">
-									<img src="/assets/tost_logo.gif" alt="Logo" />
+									<img src="/assets/tost_logo.gif" alt="Logo" style="width:8%;" />
 								</a>
 							</div><!-- .navbar-header -->
 							<!-- Collect the nav links, forms, and other content for toggling -->
@@ -142,33 +144,34 @@
     <div class="modal-content">
       <!-- header -->
       <div class="modal-header">
+      	<img class="htlfndr-logo navbar-brand" src="/assets/tost_logo.gif" alt="Logo" />
         <!-- 닫기(x) 버튼 -->
         <button type="button" class="close" data-dismiss="modal">×</button>
-        <!-- header title -->
-        <h4 class="modal-title">TOST 로그인</h4>
       </div>
       <!-- body -->
       <div class="modal-body">
          	<div class="form">
-
 		    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 		    	<div style ="text-align:center"><%= flash[:alert] %></div> 
-		    <div class="field">
-		      <%= f.email_field :email, autofocus: true, :placeholder => "e-mail", :class =>"modal-field"%>
+		    <div class="modal-field_id1" style="background-color:#f2f2f2">
+		   	<img class="icon_user_modal" src="/assets/icon_user_id.png"/>
+		   	<%= f.email_field :email, autofocus: true, :placeholder => "e-mail", :class =>"modal-field_id"%>
 		    </div>
-		    <div class="field">
-		      <%= f.password_field :password, :autocomplete => "off", :placeholder => "password", :class =>"modal-field"%>
+		    <div class="modal-field_id1" style="background-color:#f2f2f2">
+		    <img class="icon_user_modal" src="/assets/icon_password.png"/>	
+		    <%= f.password_field :password, :autocomplete => "off", :placeholder => "password", :class =>"modal-field_password"%>
 		    </div>
 		    <div class="actions">
 		      <%= f.submit "로그인", :class => 'modal-button'%>
 		      <% end %>
 		  	</div>
+		  	<div style="text-align:center"><%= render "devise/shared/links" %></div>
 		 </div>
       </div>
       <!-- Footer -->
       <div class="modal-footer" style="text-align:auto">
-        <div >멋쟁이사자처럼X성균관대학교 4팀 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/users/sign_up"><span>회원가입</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button></div>
+        <div style="text-align:center"> 아직 토스트 회원이 아니세요? &nbsp;
+        <a href="/users/sign_up"><span>회원가입</span></a></div>
       </div>
     </div>
   </div>

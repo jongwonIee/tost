@@ -244,7 +244,7 @@ label {
 }
 .switch-label-check {
     cursor: pointer;
-    margin: 0 0 -1px 0
+    margin: 0 5px -1px 0
 }
 .switch-label-check+label {
     font-weight: normal;
@@ -289,14 +289,14 @@ label {
 .search_select_2 input[type="checkbox"]+span {
     border-radius: 4px;
     background-color: #ffffff;
-    border: 1px solid #6bcec4;
+    border: 1px solid #75ddd2;
     display: block;
     height: 16px;
     position: relative;
     width: 16px
 }
 .search_select_2 input[type="checkbox"]:checked+span {
-    background-color: #6bcec4;
+    background-color: #75ddd2;
 }
 .search_select_2 input[type="checkbox"]:checked+span:after {
     color: #fff;
@@ -630,7 +630,7 @@ noscript h2 {
     top: 14px
 }
 .htlfndr-logo.navbar-brand {
-    padding: 16px 15px
+    padding: 1% 20px
 }
 .htlfndr-logo.navbar-brand>img {
     position: absolute
@@ -6611,7 +6611,7 @@ ul.glyphicon-ok::before {
     }
     #htlfndr-main-nav .navbar-nav>li.active>a,
     #htlfndr-main-nav .navbar-nav>li>a:hover {
-        color: #08c1da
+        color: #666161
     }
     .htlfndr-custom-select.htlfndr-currency .htlfndr-dropdown-select {
         padding: 9px 15px
@@ -7578,15 +7578,37 @@ only screen and (min-resolution:1.3dppx) {
     /* Safari 8 */
 }
 /*로그인모달-성국-*/
-.modal-field {
+.modal-field_id {
     font-family: "Roboto", sans-serif;
     outline: 0;
     background: #f2f2f2;
     width: 85%;
     border: 0;
-    margin: 12px 0 15px;
+    margin: 12px 0 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.modal-field_id1 {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 85%;
+    border: 0;
+    margin: 12px 0 18px;
     margin-left: 4.2rem;
-    padding: 15px;
+    padding: 1px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.modal-field_password {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 85%;
+    border: 0;
+    margin: 12px 0 10px;
+    padding: 5px;
     box-sizing: border-box;
     font-size: 14px;
 }
@@ -7603,7 +7625,7 @@ only screen and (min-resolution:1.3dppx) {
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
     cursor: pointer;
-    margin: 0 0 15px;
+    margin: 10px 0 15px;
     margin-left: 4.2rem;
 }
 .btn btn-default {
@@ -7612,18 +7634,50 @@ only screen and (min-resolution:1.3dppx) {
     z-index: 1;
     background: #FFFFFF;
     max-width: 400px;
-    margin: 0 auto;
-    margin-top:1px;
+    margin: 0;
     margin-left: 4.2rem;
      padding: 60px;
     /*text-align: center;*/
 }
+.icon_user_modal{
+    height: 20px;
+    width: 20px;
+    margin-left: 2rem;
+}
+.icon_password{
+    height: 15px;
+    width: 15px; 
+    margin-left: 1rem;
+}
+.white_modal{
+    height: 20px;
+    width: 20px; 
+    margin-left: 1rem;
+}
+.button_close{
+    margin: 7px auto;
+}
 /*회원가입 페이지-성국-*/
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+.modal-logo{
+    width: 60%;
+    height: 60%;
+}
+.signup_logo{
+    width: 60%;
+    height: 60%;
+    margin: 20px 8rem auto;
+}
 .sign_up-login-page {
     width: 100%;
     height: 100%;
-    padding: 0% 0 0;
+    padding: 3% 10% 1% 10%;
+    margin: auto;
+}
+.sign_in_login-page {
+    width: 100%;
+    height: 100%;
+    padding: 10%;
     margin: auto;
 }
 .sign_in-form {
@@ -7632,7 +7686,7 @@ only screen and (min-resolution:1.3dppx) {
     top: 20px;
     z-index: 1;
     background: #FFFFFF;
-    max-width: 400px;
+    max-width: 500px;
     margin:  auto;
     padding: 50px;
 }
@@ -7641,7 +7695,7 @@ only screen and (min-resolution:1.3dppx) {
     position: relative;
     z-index: 1;
     background: #FFFFFF;
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 60px;
     

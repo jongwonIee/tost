@@ -6,7 +6,7 @@ class Hacker < ActiveRecord::Base
     
     def self.hackers_toefl
       1.upto(2) do |loc|
-        1.upto(7) do |n|
+        1.upto(8) do |n|
           1.upto(4) do |l|
             1.upto(4) do |c|
               agent = Mechanize.new
@@ -52,6 +52,7 @@ class Hacker < ActiveRecord::Base
                 list = page.search("td").map(&:text)
                   list.each_slice(7).map.with_index do |x,i|
                     link = page.search("td p a")[i]
+                      
                 			  Hacker.create(
                 			              loc: loc,
                 			              subject: 2,
@@ -86,6 +87,7 @@ class Hacker < ActiveRecord::Base
                 list = page.search("td").map(&:text)
                   list.each_slice(7).map.with_index do |x,i|
                       link = page.search("td p a")[i]
+                      
                 			  Hacker.create(
                 			              loc: loc,
                 			              subject: 3,
