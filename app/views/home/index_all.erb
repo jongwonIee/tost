@@ -220,9 +220,9 @@
 								    		<td>
 								    			<% if current_user %>
 													<% if l.followed_by?(current_user) == true %>
-														<%= link_to image_tag("/assets/zzim_ok.gif"),   {:type => "unwish", :lecture_id => l.id}, {:class => 'zzim zzimok'}  %>
+														<%= link_to image_tag("/assets/zzim_ok.gif"),   {:type => "hacker_unwish", :lecture_id => l.id}, {:class => 'zzim zzimok'}  %>
 													<% else %>
-														<%= link_to image_tag("/assets/zzim_not.gif"),   {:type => "wish", :lecture_id => l.id}, {:class => 'zzim zzimnot'} %>
+														<%= link_to image_tag("/assets/zzim_not.gif"),   {:type => "hacker_wish", :lecture_id => l.id}, {:class => 'zzim zzimnot'} %>
 													<% end %>
 												<% else %>
 													<a href="#" data-toggle="modal" data-target="#layerpop"><img class="zzim" src="/assets/zzim_not.gif"></div></a>

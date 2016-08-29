@@ -1,25 +1,33 @@
 require 'mailgun'
 class HomeController < ApplicationController
-  def a_hackers_search_result
-    @lectures = Post.all
-  end
   
   def index
   end
   
   def index_all
     @hackers = Hacker.all
+    @young = Young.all
     
-    #찜하기 기능
-    if params[:type] == "wish"
+    #찜하기 기능-해커스
+    if params[:type] == "hacker_wish"
       current_user.follow(Hacker.find(params[:lecture_id]))
       redirect_to :back
 
-    elsif params[:type] == "unwish"
+    elsif params[:type] == "hacker_unwish"
       current_user.stop_following(Hacker.find(params[:lecture_id]))
       redirect_to :back
     end
-    #hi
+    
+    # #찜하기 기능-영단기
+    if params[:type] == "young_wish"
+      current_user.follow(Young.find(params[:lecture_id]))
+      redirect_to :back
+
+    elsif params[:type] == "yooung_unwish"
+      current_user.stop_following(Young.find(params[:lecture_id]))
+      redirect_to :back
+    end
+    
   end
   
   def index_result
@@ -33,14 +41,27 @@ class HomeController < ApplicationController
     @filtered_hackers = Hacker.where("subject In (?) and loc In (?) and week In (?) and level In (?)",
     params[:subject], params[:loc], params[:week], level)
     
+    @filtered_young = Young.where("subject In (?) and loc In (?) and week In (?) and level In (?)",
+    params[:subject], params[:loc], params[:week], level)
+    
     
     #찜하기 기능
-    if params[:type] == "wish"
+    if params[:type] == "hacker_wish"
       current_user.follow(Hacker.find(params[:lecture_id]))
       redirect_to :back
 
-    elsif params[:type] == "unwish"
+    elsif params[:type] == "hacker_unwish"
       current_user.stop_following(Hacker.find(params[:lecture_id]))
+      redirect_to :back
+    end
+    
+    
+    if params[:type] == "young_wish"
+      current_user.follow(Young.find(params[:lecture_id]))
+      redirect_to :back
+
+    elsif params[:type] == "young_unwish"
+      current_user.stop_following(Young.find(params[:lecture_id]))
       redirect_to :back
     end
     
@@ -52,14 +73,25 @@ class HomeController < ApplicationController
     @hackers = Hacker.all
     
     #찜하기 기능
-    if params[:type] == "wish"
+    if params[:type] == "hacker_wish"
       current_user.follow(Hacker.find(params[:lecture_id]))
       redirect_to :back
 
-    elsif params[:type] == "unwish"
+    elsif params[:type] == "hacker_unwish"
       current_user.stop_following(Hacker.find(params[:lecture_id]))
       redirect_to :back
     end
+    
+    if params[:type] == "young_wish"
+      current_user.follow(Young.find(params[:lecture_id]))
+      redirect_to :back
+
+    elsif params[:type] == "young_unwish"
+      current_user.stop_following(Young.find(params[:lecture_id]))
+      redirect_to :back
+    end
+    
+    
   end
     
   # def about
@@ -82,6 +114,7 @@ class HomeController < ApplicationController
   # end
       def write
         @title = params[:title]
+        
         @receiver =  params[:email]
         @content = params[:content]
         mg_client = Mailgun::Client.new("key-5c1dde76bef60438458d6afe28c6405c")
@@ -100,7 +133,7 @@ class HomeController < ApplicationController
         # new_post.content = @content
    #     new_post.email = @address
         # new_post.save
-        # redirect_to '/abou'
+        redirect_to '/about'
     end
     
     def list
