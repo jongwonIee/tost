@@ -71,6 +71,7 @@ class HomeController < ApplicationController
   
   def user_page
     @hackers = Hacker.all
+    @young = Young.all
     
     #찜하기 기능
     if params[:type] == "hacker_wish"

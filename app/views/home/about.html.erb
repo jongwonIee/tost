@@ -26,7 +26,7 @@
 				<div class="inner">
 			    <div class="col-md-12 col-sm-12" data-scrollreveal="enter left and move 100px, wait 0.6s">
 					<article class="feature left">
-						<span class="image"><img src="/step01.jpg" alt="" /></span>
+						<span class="image"><img src="/s1.jpg" alt="" /></span>
 						<div class="content">
 							<h02>STEP1</h02>
 							<br>
@@ -42,7 +42,7 @@
 					</div>
 					  <div class="col-md-12 col-sm-12" data-scrollreveal="enter left and move 100px, wait 0.6s">
 					<article class="feature right">
-						<span class="image"><img src="/step01.jpg" alt="" /></span>
+						<span class="image"><img src="/s2.jpg" alt="" /></span>
 						<div class="content">
 							<h02>STEP2</h02>
 							<br>
@@ -58,7 +58,7 @@
 					
 			    <div class="col-md-12 col-sm-12" data-scrollreveal="enter left and move 100px, wait 0.6s">
 					<article class="feature left">
-						<span class="image"><img src="/step01.jpg" alt="" /></span>
+						<span class="image"><img src="/s3.jpg" alt="" /></span>
 						<div class="content">
 							<h02>STEP3</h02>
 							<br>
@@ -188,7 +188,7 @@
                 
                 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 ">
                     <div class="text-center">
-                        <h01><img src ="/heart-meeting.png" width="45px"></i> Meet Team</h01>
+                        <h01><img src ="/men-shaking-hands.png" width="45px"></i> Meet Team</h01>
                         <p class="lead"><h02>
                             멋쟁이 사자처럼
                        </h02>
@@ -216,7 +216,7 @@
                                 <img class="img-responsive img-thumbnail img-circle" src="/jin.jpg" alt="">
                             </p>
                             <h03>정유진</h03>
-                            <p><h04>@gmail.com</h04>
+                            <p><h04>yoojinn93@naver.com</h04>
                                
                             </p>
                         </div>
@@ -239,7 +239,7 @@
                             </p>
                             <h03>이종원</h03>
                             <p><h04>
-                               @gmail.com</h04>
+                               ljw3728@gmail.com</h04>
                             </p>
                         </div>
                     </div>
@@ -249,7 +249,7 @@
                                 <img class="img-responsive img-thumbnail img-circle"  src="/jun.jpg" alt="">
                             </p>
                             <h03>박찬준</h03>
-                            <p><h04>@gmail.com</h04>
+                            <p><h04>wns0415@gmail.com</h04>
                               
                             </p>
                         </div>
@@ -279,7 +279,6 @@
                         <h03><i class="fa fa-pencil small-icons bk-color-light-blue"></i>Send Us</h03>
                         <hr />
                         
-        <div class="row">
 
         <form action="/write"  method="POST"> 
  
@@ -331,10 +330,9 @@
 <!--</div>-->
         </div>
         </div>
-        </div>
-        </form>                
-        </div>
-                <div class="col-md-4 col-md-offset-1  col-sm-12" data-scrollreveal="enter right and move 100px, wait 0.6s">
+        </form>            
+        
+                <div class="col-md-6  col-sm-12" data-scrollreveal="enter right and move 100px, wait 0.6s">
                     <h03><i class="fa fa-comments small-icons bk-color-red"></i>Reach Us Here</h03>
                     <hr />
                     <p><h02>성균관대학교 학생회관 208호</h02></p><br />
@@ -342,24 +340,26 @@
             </div>
             <!-- ./ Content div-->
         </div>
+        </div>
 </section>
 </body>
 <script>
 
 		 $(".submit2").click(function() {
-		      if (exampleInputTitle1.value == '' || exampleInputPassword1.value=='') {
-                alert("모든 항목을 입력하세요.");
+		      if (exampleInputTitle1.value == '' && exampleInputPassword1.value=='') {
+                window.alert("모든 항목을 입력하세요.");
                 }
 		  //   if(exampleInputTitle1.form-control.value==""||exampleInputPassword1.form-control.value==""){ 
     //          window.alert("모든 항목을 입력하세요") 
              else if(exampleInputTitle1.value=='') {
-                alert("제목을 입력하세요.");
+                window.alert("제목을 입력하세요.");
                 }
+                
             else if(exampleInputPassword1.value=='') {
-                alert("내용을 입력하세요.");
+                window.alert("내용을 입력하세요.");
                 }
              else 	 	// sweetAlert("Good job!", "You clicked the button!", "success")
-		  	sweetAlert({   title: "메일이 전송되었습니다.", imageUrl: "/assets/zzim_not.gif", timer: 2000,   showConfirmButton: false, customClass: 'sweet' });
+		  	sweetAlert({   title: "메일이 전송되었습니다. 좋은 의견 감사합니다. 앞으로도 더욱 좋은 서비스를 위해 노력하겠습니다.", imageUrl: "/close-envelope.png", timer: 2000,   showConfirmButton: false, customClass: 'sweet' });
 		 });
 </script>
 
