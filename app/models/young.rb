@@ -3,7 +3,6 @@ class Young < ActiveRecord::Base
         acts_as_followable #지우면꿀밤
         
     def self.young
-        
         agent = Mechanize.new
         # 92500.upto(92999) do |n|
         92500.upto(92999) do |n|

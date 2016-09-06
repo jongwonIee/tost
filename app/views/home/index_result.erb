@@ -85,7 +85,7 @@
 				
 				<section class="container htlfndr-top-destinations">
 					<h2 class="htlfndr-section-title"></h2>
-			
+			<center><h1> 토스트에는 <%= @hackers_num + @pagoda_num + @young_num %>개의 강의가 있습니다! </h1></center>
 						<div class="search search_1 search_margin">
 							<p class="search_1_name">과목군</p>
 							<p class="search_select_1">
@@ -206,7 +206,7 @@
 							index_result로 갈거임 index_all은 우리가 보는 용도-->
 							    <tbody>
 							    
-							    <% if @filtered_hackers.empty? and @filtered_young.empty? %>
+							    <% if @filtered_hackers.empty? and @filtered_pagoda.empty? and @filtered_young.empty? %>
 							    	<tr>
 							    		<td></td>
 							    		<td></td>
@@ -220,7 +220,7 @@
 							    	<% @filtered_hackers.each do |l| %>
     							    	
 										<tr>
-										  <% name = ["해커스","와이비엠","파고다","영단기"] %>
+										  <% name = ["해커스","파고다","와이비엠","영단기"] %>
 									      <% loc = ["강남", "종로"] %>
 									      <% subject = ["토플", "토익", "토스"] %>
 										  <%if l.subject == 1 %>
@@ -251,14 +251,41 @@
 												<% end %>
 								    		</td>
 									      </tr>   
-										<% end %>
+									<% end %>
 						
-							
-							
-							<% @filtered_young.each do |l| %>
+									<% @filtered_pagoda.each do |l| %>
     							    	
 										<tr>
-										  <% name = ["해커스","와이비엠","파고다","영단기"] %>
+										  <% name = ["해커스","파고다","와이비엠","영단기"] %>
+									      <% loc = ["강남", "종로","신촌"] %>
+									      <% subject = ["토플", "토익", "토스"] %>
+									      <% week = ["주 5일반", "월수금반", "화목금반", "주말반"] %>
+									      <% time = ["아침", "오전", "오후", "저녁"] %>
+											
+											<td><%= subject[l.subject-1] %></td>
+											<td><%= name[l.name-1] %><br>(<%= loc[l.loc-1] %>) </td>
+											<td><%= l.day %><br>(<%= week[l.week-1] %>) </td>
+											<td><a href="http://m.pagoda21.com/speaker/detail/<%= l.link %>?popup=Y" target="_blank" class="lecture_go"><%= l.title %><i class="fa fa-search lecture_go_icon yy" aria-hidden="true"></i></a></td>
+											<td><%= l.teacher %></td>
+											<td><%= l.price %></td>
+								    		<td>
+								    			<% if current_user %>
+													<% if l.followed_by?(current_user) == true %>
+														<%= link_to image_tag("/assets/zzim_ok.gif"),   {:type => "pagoda_unwish", :lecture_id => l.id}, {:class => 'zzim zzimok'}  %>
+													<% else %>
+														<%= link_to image_tag("/assets/zzim_not.gif"),   {:type => "pagoda_wish", :lecture_id => l.id}, {:class => 'zzim zzimnot'} %>
+													<% end %>
+												<% else %>
+													<a href="#" data-toggle="modal" data-target="#layerpop"><img class="zzim" src="/assets/zzim_not.gif"></div></a>
+												<% end %>
+								    		</td>
+									      </tr>   
+									<% end %>						
+							
+									<% @filtered_young.each do |l| %>
+    							    	
+										<tr>
+										  <% name = ["해커스","파고다","와이비엠","영단기"] %>
 									      <% loc = ["강남", "종로"] %>
 									      <% subject = ["토플", "토익", "토스"] %>
 									      <% week = ["주 5일반", "월수금반", "화목금반", "주말반"] %>
@@ -282,8 +309,8 @@
 												<% end %>
 								    		</td>
 									      </tr>   
-							<% end %>
-							<% end %>
+									<% end %>
+								<% end %>
 							    </tbody>
 							</table>
 					</div>

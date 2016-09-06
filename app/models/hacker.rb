@@ -4,7 +4,7 @@ class Hacker < ActiveRecord::Base
     
     acts_as_followable #지우면꿀밤
     
-    def self.hackers_toefl
+    def self.toefl
       1.upto(2) do |loc|
         1.upto(8) do |n|
           1.upto(4) do |l|
@@ -18,6 +18,13 @@ class Hacker < ActiveRecord::Base
                 list = page.search("td").map(&:text)
                   list.each_slice(7).map.with_index do |x,i|
                       link = page.search("td p a")[i]
+                      if n == 1 or n == 2 or n == 3
+                        level = 1
+                      elsif n == 4 or n == 5
+                        level = 2
+                      else
+                        level = 3
+                      end
                 			  Hacker.create(
                 			              loc: loc,
                 			              subject: 1,
@@ -29,7 +36,7 @@ class Hacker < ActiveRecord::Base
                 			              week: l,
                 			              title: x[0],
                 			              teacher: x[2],
-                			              level: n
+                			              level: level
                 			              )
                   end
             end
@@ -38,7 +45,7 @@ class Hacker < ActiveRecord::Base
       end
     end
     
-    def self.hackers_toeic
+    def self.toeic
       1.upto(2) do |loc|
         1.upto(7) do |n|
           1.upto(4) do |l|
@@ -52,7 +59,13 @@ class Hacker < ActiveRecord::Base
                 list = page.search("td").map(&:text)
                   list.each_slice(7).map.with_index do |x,i|
                     link = page.search("td p a")[i]
-                      
+                      if n == 1 or n == 2 or n == 3
+                        level = 1
+                      elsif n == 4 or n == 5
+                        level = 2
+                      else
+                        level = 3
+                      end
                 			  Hacker.create(
                 			              loc: loc,
                 			              subject: 2,
@@ -64,7 +77,7 @@ class Hacker < ActiveRecord::Base
                 			              week: l,
                 			              title: x[0],
                 			              teacher: x[2],
-                			              level: n
+                			              level: level
                 			              )
                   end
             end
@@ -73,7 +86,7 @@ class Hacker < ActiveRecord::Base
       end
     end
     
-    def self.hackers_toes
+    def self.toes
       1.upto(2) do |loc|
         1.upto(7) do |n|
           1.upto(4) do |l|
@@ -87,7 +100,13 @@ class Hacker < ActiveRecord::Base
                 list = page.search("td").map(&:text)
                   list.each_slice(7).map.with_index do |x,i|
                       link = page.search("td p a")[i]
-                      
+                      if n == 1 or n == 2 or n == 3
+                        level = 1
+                      elsif n == 4 or n == 5
+                        level = 2
+                      else
+                        level = 3
+                      end                      
                 			  Hacker.create(
                 			              loc: loc,
                 			              subject: 3,
@@ -99,7 +118,7 @@ class Hacker < ActiveRecord::Base
                 			              week: l,
                 			              title: x[0],
                 			              teacher:x[2],
-                			              level: n
+                			              level: level
                 			              )
                   end
             end

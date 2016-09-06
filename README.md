@@ -1,5 +1,5 @@
 <!-- rake db:drop; rake db:migrate; rails c  //
-Hacker.hackers_toefl; Hacker.hackers_toeic; Hacker.hackers_toes; Young.young -->
+Hacker.toefl; Hacker.toeic; Hacker.toes; Pagoda.toefl; Pagoda.toeic; Pagoda.toes; Young.young -->
 
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'

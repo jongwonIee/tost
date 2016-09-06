@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160829153426) do
+ActiveRecord::Schema.define(version: 20160902043344) do
 
   create_table "emails", force: :cascade do |t|
     t.string   "title"
@@ -35,6 +35,22 @@ ActiveRecord::Schema.define(version: 20160829153426) do
   add_index "follows", ["follower_id", "follower_type"], name: "fk_follows"
 
   create_table "hackers", force: :cascade do |t|
+    t.string   "day"
+    t.string   "title"
+    t.string   "link"
+    t.string   "teacher"
+    t.string   "price"
+    t.integer  "loc"
+    t.integer  "time"
+    t.integer  "week"
+    t.integer  "level"
+    t.integer  "subject"
+    t.integer  "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pagodas", force: :cascade do |t|
     t.string   "day"
     t.string   "title"
     t.string   "link"
