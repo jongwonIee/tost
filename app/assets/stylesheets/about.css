@@ -18,7 +18,7 @@
     GENERAL  STYLES
     =====================================================*/
 
-.
+
 
 .flot-nav {
     float:right;
@@ -336,16 +336,16 @@ background-color: rgb(19, 170, 74);
     -webkit-transform: scale(1);
   }
 }
-@-ms-keyframes scaleUp {
-  0% {
-    opacity: 0;
-    -ms-transform: scale(0.3);
-  }
-  100% {
-    opacity: 1;
-    -ms-transform: scale(1);
-  }
-}
+/*@-ms-keyframes scaleUp {*/
+/*  0% {*/
+/*    opacity: 0;*/
+/*    -ms-transform: scale(0.3);*/
+/*  }*/
+/*  100% {*/
+/*    opacity: 1;*/
+/*    -ms-transform: scale(1);*/
+/*  }*/
+/*}*/
 @-o-keyframes scaleUp {
   0% {
     opacity: 0;
