@@ -24,7 +24,7 @@
     /*content: '\f096'; checkbox unchecked */
 /*}*/
 /*label:after {*/
-    /*content: '\f00c'; /*checkbox checked */
+    /*content: '\f00c'; /*checkbox checked *
 /*    max-width: 0;*/
 /*    overflow: hidden;*/
 /*    opacity: 0.5;*/
@@ -46,7 +46,7 @@
 /*    margin-right: 90px;*/
 /*}*/
 
-.ms-options-wrap > .ms-options > ul li.selected label,
+/*.ms-options-wrap > .ms-options > ul li.selected label,*/
 .ms-options-wrap > .ms-options > ul label:hover {
     background-color: #63B1B1;
 }
