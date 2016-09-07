@@ -1,3 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+.modal-logo{
+    width: 60%;
+    height: 60%;
+}
+
 html {
     min-height: 100%
 }
@@ -2115,6 +2121,7 @@ a.htlfndr-read-more-button.hovered:after {
 }
 .htlfndr-copyright p {
     font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+    ,
     color: #fff;
     font-weight: 300;
     margin: 20px 0;
@@ -7657,11 +7664,7 @@ only screen and (min-resolution:1.3dppx) {
     margin: 7px auto;
 }
 /*회원가입 페이지-성국-*/
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
-.modal-logo{
-    width: 60%;
-    height: 60%;
-}
+
 .signup_logo{
     width: 60%;
     height: 60%;
