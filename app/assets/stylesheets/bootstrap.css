@@ -6130,11 +6130,11 @@ button.close {
   border-left-color: #fff;
 }
 
-.htlfndr-slide-wrapper > img, {
-    height: 100%;
-    position: absolute;
-    width: 100%;
-}
+/*.htlfndr-slide-wrapper > img, {*/
+/*    height: 100%;*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*}*/
 
 .carousel {
   position: relative;
