@@ -21,10 +21,10 @@
 /*}*/
 
 /*label:before {*/
-    content: '\f096'; /*checkbox unchecked */
+    /*content: '\f096'; checkbox unchecked */
 /*}*/
 /*label:after {*/
-    content: '\f00c'; /*checkbox checked*/
+    /*content: '\f00c'; /*checkbox checked */
 /*    max-width: 0;*/
 /*    overflow: hidden;*/
 /*    opacity: 0.5;*/
