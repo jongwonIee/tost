@@ -1,0 +1,15 @@
+
+<html>
+
+
+<h1> ♡~보낸 화살들~♡ </h1>
+
+<% @every_post.each do |p| %>
+    제목 : <%= p.title %> <br>
+    내용 : <%= p.content %> <br>
+    화살 받은 사람 : <%= p.email %> <br>
+    <hr>
+<%end%>
+
+
+<div class="label label-warning" style="text-align:center" ><h4><a href="/"> ♡~화살 쏘기~♡ </a></h4></div>

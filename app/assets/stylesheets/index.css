@@ -1,0 +1,396 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+
+
+.search_submit {
+    float: right;
+}
+
+.search_submit_btn {
+    font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+    font-weight: 300;
+    background-color: #fcb0ac;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 5px 46px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 30px 2px;
+    border-radius: 4px;
+    font-size: 19px;
+}
+
+.search_submit_btn:hover {
+    background-color: #fff250;
+}
+.search_submit_btn_signup {
+    font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+    font-weight: 300;
+    background-color: #fcb0ac;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 4px;
+    font-size: 19px;
+    width: 100%;
+    height: 50px;
+    margin: 18px 0 0;
+}
+.search_submit_btn_signin {
+    font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+    font-weight: 300;
+    background-color: #fcb0ac;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 4px;
+    font-size: 19px;
+    width: 85%;
+    height: 50px;
+    margin: 15px 4.2rem 0;
+}
+
+.search_submit_btn_signup:hover {
+    background-color: #fff250;
+}
+
+a {
+    color: #00c9b5;
+}
+
+td>a:hover {
+    color: #00c9b5 !important;
+}
+
+/*.search_table{*/
+/*    width: 99.9%;*/
+    /*background-color: #6eccc3;*/
+    /*border: 1px solid #6ECCC3;*/
+    /*border-radius: 3px;*/
+/*}*/
+
+/*.search_table td{*/
+/*    width: 25%;*/
+/*    padding: 6px;*/
+    /*border-right: 2px solid #6ECCC3;*/
+/*}*/
+
+/*.search_box {*/
+/*    width: 100%;*/
+/*    height: 254px;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.search_table fieldset {*/
+/*    margin: 0;*/
+/*    padding: 1px 0;*/
+    /*background-color: #f8f8f8;*/
+/*    border: 0;*/
+/*    -webkit-border-radius: 0 0 3px 3px;*/
+/*    -moz-border-radius: 0 0 3px 3px;*/
+/*    border-radius: 0 0 3px 3px;*/
+/*}*/
+
+/*.search_table fieldset p {*/
+/*    padding-left: 18px;*/
+/*}*/
+
+/*.search_table fieldset label {*/
+/*    font-weight: 300;*/
+/*    font-size:19px;*/
+/*    font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;*/
+/*}*/
+
+/*.search_table fieldset legend {*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    box-sizing: border-box;*/
+/*    border-bottom: 1px solid white;*/
+/*    padding: 10px 0 10px 10px;*/
+    /*background-color: #f4f4f4;*/
+/*    -webkit-border-radius: 3px 3px 0 0;*/
+/*    -moz-border-radius: 3px 3px 0 0;*/
+/*    border-radius: 3px 3px 0 0;*/
+/*    font-weight: 300;*/
+/*    font-size: 19px;*/
+/*    font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;*/
+/*}*/
+
+/*.search_table fieldset legend span{*/
+/*    margin-left:10px;*/
+/*}*/
+
+/*.legend_t {*/
+/*    width: 100%;*/
+/*    text-align: center;*/
+/*    background-color: #f96931;*/
+/*    border-radius: 8px;*/
+/*    color: white;*/
+/*}*/
+
+span.fa.fa-search {
+    margin-left: 5px;
+}
+
+
+/*검색결과 table*/
+table.result_table {
+    font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    /*margin: -43px 10px;*/
+    width: 100%;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    table-layout:fixed;
+    word-break:break-all;
+}
+table.result_table thead th {
+    font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+    width: 150px;
+    font-weight: 300;
+    vertical-align: middle;
+    color: #fff;
+    background: #75ddd2;
+    margin: 20px 10px;
+    text-align: center;
+    line-height: 45px;
+}
+table.result_table td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: middle;
+    line-height: 30px;
+    height: 115px;
+}
+table.result_table tr {
+    line-height:50px;
+    border-bottom: 1px solid #6eccc3;
+}
+
+table.result_table tr:hover {
+  background-color: rgba(18, 178, 163, 0.17);
+}
+
+table.result_table .even {
+    /*background: #f6f3f3;*/
+}
+
+
+.sg-replace-icons input[type=radio] + label:before {
+	/* unselected radio */
+	/* content: "\f10c"; - Default icon */
+    content: "\f08a";
+}
+.sg-replace-icons input[type=radio]:checked + label:before {
+	/* selected radio */
+	/* content: "\f192"; - Default icon */
+    content: "\f004";
+    color: #F06586;
+}
+
+
+
+
+/*검색박스 */
+.search {
+    border-radius: 4px;
+    width: 23.5%;
+    height: 235px;
+    font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    float:left;
+}
+
+.search_1 {
+    border: 1px solid #fcb0ac;
+}
+
+.search_2 {
+    border: 1px solid #75ddd2;
+}
+
+.search_3 {
+    border: 1px solid #a6de81;
+}
+
+.search_4 {
+    border: 1px solid #fff250;
+}
+
+
+.search_margin{
+    margin-right:22px;
+}
+
+.search_1_name {
+    color: white;
+    background: #fcb0ac;
+    margin-bottom: 18px;
+    padding: 3px;
+    text-align: center;
+}
+
+.search_2_name {
+    color: white;
+    background: #75ddd2;
+    margin-bottom: 18px;
+    padding: 3px;
+    text-align: center;
+}
+
+.search_3_name {
+    color: white;
+    background: #a6de81;
+    margin-bottom: 18px;
+    padding: 3px;
+    text-align: center;
+}
+
+.search_4_name {
+    color: white;
+    background: #fff250;
+    margin-bottom: 18px;
+    padding: 3px;
+    text-align: center;
+}
+
+
+
+.search_select_1, .search_select_2, .search_select_3, .search_select_4 {
+    margin-left: 23px;
+}
+
+.search_select_label {
+    font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+    font-weight: 300;
+}
+
+.zzim img, .zzim{
+	width: 40px;
+}
+
+
+/*q-popltip*/
+
+	.q-pop {
+		position: relative;
+		display: inline;
+		color: #75ddd2;
+		cursor: pointer;
+	}
+	
+	.q-pop span {
+		position: absolute;
+		left: 50%;
+		width:140px;
+		padding: 6px;
+		margin-left: -71px;
+		background: #000;
+		color: white;
+		font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+        font-weight: 500;
+		font-size:18px;
+		text-align: center;
+		visibility: hidden;
+		border-radius: 5px;
+	} 
+			
+	.q-pop span:after {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -8px;
+		width: 0; height: 0;
+		border-top: 8px solid black;
+		border-right: 8px solid transparent;
+		border-left: 8px solid transparent;
+	}
+			
+	.q-pop:hover.q-pop span {
+		visibility: visible;
+		opacity: 0.8;
+		bottom: 30px;
+		z-index: 999;
+	}
+	
+	
+	
+	/*main페이지 nav*/
+	
+.vertical-container {
+     height:400px;
+     display:-webkit-flex;
+     display:flex;
+     -webkit-align-items:center;
+     align-items:center;
+     -webkit-justify-content:center;
+     justify-content:center;
+}
+
+.logo_img {
+    margin-bottom: 30px;
+}
+
+.index_nav > ul {
+    margin-left: -33px;
+
+}
+.index_nav > ul > li {
+     list-style-type : none;
+     display:inline;
+}
+
+
+.index_nav > ul > li > a > span {
+     color : black !important;
+    font-size: 17px;
+    font-weight: normal;
+    padding: 17px;
+    font-family: 'Spoqa Han Sans', 'Noto Sans Korean', sans-serif;
+}
+
+.index_nav > ul > li > a > span:hover {
+    color: #666161 !important;
+}
+
+.lecture_go,
+.lecture_go:active{
+    color: black;
+    cursor: pointer;
+}
+
+.lecture_go:hover{
+    color:#75ddd2;
+}
+
+.lecture_go_icon{
+    margin-left: -7px;
+    color: white;
+    background-color: #75ddd2;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+
+.yy{
+    margin-left: 4px !important;
+}
+
+.yyy{
+    font-size: 15px !important;
+    color: #fcb0ac !important;
+}

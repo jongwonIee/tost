@@ -1,0 +1,193 @@
+<!-- Overlay preloader-->
+
+<div class="htlfndr-loader-overlay"></div>
+
+<section class="htlfndr-slider-section">
+  <div class="vertical-container">
+    <div class="index_top">
+      <div class="logo_img">
+        <img src="/assets/tost_logo.gif" alt="Logo" />
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="index_nav">
+        <!-- List with sing up/sing in links -->
+        <ul>
+          <% if current_user %> <!--로그인 한경우 -->
+              <li id="htlfndr-singin-link">
+                <a href="/home/index">
+                  <span onclick="DoNav('/index')">HOME</span></a>
+              </li>
+
+              <li id="htlfndr-singin-link">
+                <a href="/home/user_page">
+                  <span onclick="DoNav('/user_page')">마이페이지</span></a>
+              </li>
+
+              <li id="htlfndr-singin-link">
+                <a href="/home/about">
+                  <span onclick="DoNav('/about')">ABOUT</span></a>
+              </li>
+
+              <li id="htlfndr-singin-link">
+                <a href="/users/sign_out">
+                  <span onclick="DoNav('/users/sign_out')">로그아웃</span></a>
+              </li>
+
+          <% else %> <!--로그인 안한경우 -->
+              <li id="htlfndr-singin-link">
+                <a href="/home/index">
+                  <span onclick="DoNav('/index')">HOME</span></a>
+              </li>
+              <li id="htlfndr-singin-link">
+                <a href="#" data-toggle="modal" data-target="#layerpop"><span>로그인</span></a>
+              </li>
+
+              <li id="htlfndr-singup-link">
+                <a href="/users/sign_up">
+                  <span onclick="DoNav('/users/sign_up')">회원가입</span></a>
+              </li>
+
+              <li id="htlfndr-singin-link">
+                <a href="/home/about">
+                  <span onclick="DoNav('/about')">ABOUT</span></a>
+              </li>
+
+          <% end %>
+        </ul><!-- .htlfndr-singup-block -->
+      </div><!-- .collapse.navbar-collapse -->
+    </div>
+  </div>
+</section>
+<!-- Start of slider section -->
+<section class="htlfndr-slider-section">
+
+  <div class="owl-carousel">
+    <div class="htlfndr-slide-wrapper">
+      <img src="/assets/banner_2.gif" alt="img-1" />
+    </div><!-- .htlfndr-slide-wrapper-->
+    <div class="htlfndr-slide-wrapper">
+      <img src="/assets/banner_3.gif" alt="img-2" />
+    </div><!-- .htlfndr-slide-wrapper-->
+    <div class="htlfndr-slide-wrapper">
+      <img src="/assets/banner_1.gif" alt="img-3" />
+    </div><!-- .htlfndr-slide-wrapper-->
+  </div>
+</section><!-- .htlfndr-slider-section -->
+<!-- End of slider section -->
+
+<!-- Start of main content -->
+<main role="main">
+  <!--<img src="/assets/logo-ver2.2.gif" alt="Logo" />-->
+
+  <!-- Section with popular destinations -->
+  <form action="/home/index_result">
+    <section class="container htlfndr-top-destinations">
+      <h2 class="htlfndr-section-title"></h2>
+      <div class="search search_1 search_margin">
+        <p class="search_1_name">과목군</p>
+        <p class="search_select_1">
+          <label class="search_select_label">
+            <input type="checkbox" name="subject[]" value="1"></input>
+            토플</label>
+        </p>
+        <p class="search_select_1">
+          <label class="search_select_label">
+            <input type="checkbox" name="subject[]" value="2"></input>
+            토익</label>
+        </p>
+        <p class="search_select_1">
+          <label class="search_select_label">
+            <input type="checkbox" name="subject[]" value="3"></input>
+            토익스피킹</label>
+        </p>
+      </div>
+
+      <div class="search search_2 search_margin">
+        <p class="search_2_name">레벨</p>
+
+        <p class="search_select_2">
+          <label class="search_select_label">
+            <input type="checkbox" name="level[]" value="3"></input>
+            상</label>
+          <i class="fa fa-question-circle q-pop" aria-hidden="true"><span>토플 105점대<br>토익 900점대<br>토스 160점대</span></i>
+        </p>
+
+        <p class="search_select_2">
+          <label class="search_select_label">
+            <input type="checkbox" name="level[]" value="2"></input>
+            중</label>
+          <i class="fa fa-question-circle q-pop" aria-hidden="true"><span>토플 90점대<br>토익 800점대<br>토스 130점대</span></i>
+        </p>
+
+        <p class="search_select_2">
+          <label class="search_select_label">
+            <input type="checkbox" name="level[]" value="1"></input>
+            하</label>
+          <i class="fa fa-question-circle q-pop" aria-hidden="true"><span>토플 80점대<br>토익 700점대<br>토스 120점대</span></i>
+        </p>
+
+      </div>
+
+      <div class="search search_3 search_margin">
+        <p class="search_3_name">위치</p>
+        <p class="search_select_3">
+          <label class="search_select_label">
+            <input type="checkbox" name="loc[]" value="1"></input>
+            강남</label>
+        </p>
+        <p class="search_select_3">
+          <label class="search_select_label">
+            <input type="checkbox" name="loc[]" value="2"></input>
+            종로</label>
+        </p>
+        <p class="search_select_3">
+          <label class="search_select_label">
+            <input type="checkbox" name="loc[]" value="3"></input>
+            신촌</label>
+        </p>
+      </div>
+
+      <div class="search search_4">
+        <p class="search_4_name">요일</p>
+        <p class="search_select_4">
+          <label class="search_select_label">
+            <input type="checkbox" name="week[]" value="1"></input>
+            주5일</label>
+        </p>
+        <p class="search_select_4">
+          <label class="search_select_label">
+            <input type="checkbox" name="week[]" value="2"></input>
+            월수금</label>
+        </p>
+        <p class="search_select_4">
+          <label class="search_select_label">
+            <input type="checkbox" name="week[]" value="3"></input>
+            화목금</label>
+        </p>
+        <p class="search_select_4">
+          <label class="search_select_label">
+            <input type="checkbox" name="week[]" value="4"></input>
+            주말</label>
+        </p>
+      </div>
+
+      <div class="search_submit">
+        <button class="search_submit_btn">검색<span class="fa fa-search" aria-hidden="true"></span></button>
+      </div>
+    </section>
+  </form>
+</main>
+
+<style>
+  .htlfndr-wrapper { display: none; }
+</style>
+
+<script>
+  $(".zzimnot").click(function() {
+    sweetAlert({   title: "찜목록에 추가되었습니다!",   text: "마이페이지에서 확인하세요.",   imageUrl: "/assets/zzim_ok.gif", timer: 2000,   showConfirmButton: false, customClass: 'sweet' });
+  });
+
+  $(".zzimok").click(function() {
+    sweetAlert({   title: "찜목록에서 삭제되었습니다!", imageUrl: "/assets/zzim_not.gif", timer: 2000,   showConfirmButton: false, customClass: 'sweet' });
+  });
+</script>

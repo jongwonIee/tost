@@ -1,0 +1,324 @@
+<div class="htlfndr-wrapper htlfndr-user-page">
+
+
+	<!-- Start of main content -->
+	<div class="container">
+
+		<main id="htlfndr-main-content" role="main">
+			<div class="row htlfndr-user-tabs htlfndr-credit-card-page">
+				
+				<div class="htlfndr-user-person-navigation-wrapper col-sm-4 col-md-3">
+					<div class="htlfndr-user-person-navigation">
+						
+						<h3 class="htlfndr-user-name"><%= current_user.username %></h3>
+						<% if current_user.sign_in_count < 10 %>
+							<h6 class="htlfndr-user-membership">Bronze
+							<i class="fa fa-question-circle q-pop yyy" aria-hidden="true"><span>toss에 로그인한 횟수에 따라 회원등급이 올라갑니다</span></i></h6>
+						<% elsif current_user.sign_in_count < 20 %>
+							<h6 class="htlfndr-user-membership">Silver</h6>
+							<i class="fa fa-question-circle q-pop yyy" aria-hidden="true"><span>toss에 로그인한 횟수에 따라 회원등급이 올라갑니다</span></i>
+						<% elsif current_user.sign_in_count < 30 %>
+							<h6 class="htlfndr-user-membership">Gold</h6>
+							<i class="fa fa-question-circle q-pop yyy" aria-hidden="true"><span>toss에 로그인한 횟수에 따라 회원등급이 올라갑니다</span></i>
+						<% elsif current_user.sign_in_count < 40 %>
+							<h6 class="htlfndr-user-membership">Platinum</h6>
+							<i class="fa fa-question-circle q-pop yyy" aria-hidden="true"><span>toss에 로그인한 횟수에 따라 회원등급이 올라갑니다</span></i>
+						<% elsif current_user.sign_in_count < 50 %>
+							<h6 class="htlfndr-user-membership">Diamond</h6>
+							<i class="fa fa-question-circle q-pop yyy" aria-hidden="true"><span>toss에 로그인한 횟수에 따라 회원등급이 올라갑니다</span></i>
+						<% elsif current_user.sign_in_count > 49 %>
+							<h6 class="htlfndr-user-membership">Original Cheese</h6>
+							<i class="fa fa-question-circle q-pop yyy" aria-hidden="true"><span>toss에 로그인한 횟수에 따라 회원등급이 올라갑니다</span></i>
+						<% end %>
+						
+						
+	
+						<ul role="tablist">
+							<!--<li><a href="#htlfndr-user-tab-1"><i class="fa fa-user"></i> personal info</a></li>-->
+							<li><a href="#htlfndr-user-tab-2"><i class="fa fa-heart-o"></i> wishlist</a></li>
+							<li><a href="#htlfndr-user-tab-3"><i class="fa fa-wrench"></i> settings</a></li>
+						</ul>
+					</div><!-- .htlfndr-user-person-navigation -->
+				</div><!-- .htlfndr-user-person-navigation-wrapper -->
+				
+				<div class="htlfndr-user-panel col-md-8 col-sm-8 htlfndr-setting-page" id="htlfndr-user-tab-2">
+					<div class="htlfndr-setting">
+						
+							<h2>My <b>Score</b></h2>
+						<div class="row htlfndr-counters">
+							<div class="col-md-3 col-sm-6">
+								<div class="htlfndr-counter-block">
+										<div class="htlfndr-icon-holder1">
+												<h2 class='test_type'>TOEIC</h2>
+											<!--<i class="fa fa-plane"></i>-->
+										</div>
+									<dl class="htlfndr-counter-numbers">
+										<dt> <%=current_user.toeic_score%> </dt>
+										<dd>score</dd>
+									</dl>
+								</div><!-- .htlfndr-counter-block -->
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="htlfndr-counter-block">
+									<div class="htlfndr-icon-holder2">
+										<h2 class='test_type'>TOEFL</h2>
+										<!--<i class="fa fa-building-o"></i>-->
+									</div>
+									<dl class="htlfndr-counter-numbers">
+										<dt><%=current_user.toefl_score%></dt>
+										<dd>score</dd>
+									</dl>
+								</div><!-- .htlfndr-counter-block -->
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="htlfndr-counter-block">
+									<div class="htlfndr-icon-holder3">
+										<h2 class='test_type'>TEPS</h2>
+										<!--<i class="fa fa-globe"></i>-->
+									</div>
+									<dl class="htlfndr-counter-numbers">
+										<dt><%= current_user.teps_score%></dt>
+										<dd>score</dd>
+									</dl>
+								</div><!-- .htlfndr-counter-block -->
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="htlfndr-counter-block">
+									<div class="htlfndr-icon-holder4">
+										<h2 class='test_type'>토스</h2>
+										<!--<i class="fa fa-map-marker"></i>-->
+									</div>
+									<dl class="htlfndr-counter-numbers">
+										<dt><%=current_user.tos_level%></dt>
+										<dd>level</dd>
+									</dl>
+								</div><!-- .htlfndr-counter-block -->
+							</div>
+							<!--<p><a href = "#htlfndr-user-tab-3", class = "move_a">setting 페이지로 이동해 점수를 입력해보세요</a></p>-->
+						</div><!-- .row.htlfndr-counters -->
+					<!--</div>-->
+					
+				<!--</div><!-- #htlfndr-user-tab-1 -->
+				
+				<!--<div class="htlfndr-user-panel col-md-8 col-sm-8" id="htlfndr-user-tab-2">-->
+				<!--	<div class="htlfndr-setting">-->
+							<hr>
+							
+							<h2>My <b>Wishlist</b></h2>
+									<table class="result_table">
+									<colgroup>
+								      <col width="7%">
+								      <col width="10%">
+								      <col width="23%">
+								      <col width="27%">
+								      <col width="10%">
+								      <col width="13%">
+								      <col width="10%">
+								    </colgroup>
+								    <thead>
+								    <tr>
+								        <th scope="cols">과목군</th>
+								        <th scope="cols">위치(학원)</th>
+								        <th scope="cols">시간</th>
+								        <th scope="cols">강의명</th>
+								        <th scope="cols">강사</th>
+								        <th scope="cols">가격</th>
+								        <th scope="cols">찜</th>
+								    </tr>
+								    </thead>
+								    
+								    <tbody>
+								    	<% if current_user.follow_count == 0 %>
+									    	<tr>
+									    		<td></td>
+									    		<td></td>
+									    		<td></td>
+									    		<td>찜한 강의가 없습니다!</td>
+									    		<td></td>
+									    		<td></td>
+									    		<td></td>
+									    	</tr>
+										<% else %>
+										<% @hackers.each do |l| %>
+											<% if l.followed_by?(current_user) == true %>
+											<tr>
+												<% name = ["해커스"] %>
+												<% loc = ["강남", "종로"] %>
+												<% subject = ["토플", "토익", "토스"] %>
+												<% level = ["기초","필수","입문","기본","중급","정규","실전"] %>
+												<% week = ["주 5일반", "월수금반", "화목금반", "주말반"] %>
+												<% time = ["아침", "오전", "오후", "저녁"] %>
+												
+												<td><%= subject[l.subject-1] %></td>
+												<td><%= name[l.name-1] %><br>(<%= loc[l.loc-1] %>)</td>
+												<td><%= l.day %> <br> (<%= week[l.week-1] %>) </td>
+												<td><a href="http://www.hackers.ac<%= l.link %>" target="_blank" class="lecture_go"><%= l.title %><i class="fa fa-search lecture_go_icon" aria-hidden="true"></i></a></td>
+												<td><%= l.teacher %></td>
+												<td><%= l.price %></td>
+									    		<td>
+									    			<% if current_user %>
+														<% if l.followed_by?(current_user) == true %>
+															<%= link_to image_tag("/assets/zzim_ok.gif"),   {:type => "unwish", :lecture_id => l.id}, {:class => 'zzim zzimok'}  %>
+														<% end %>
+													<% else %>
+														<a href="#" data-toggle="modal" data-target="#layerpop"><img class="zzim" src="/assets/zzim_not.gif"></div></a>
+													<% end %>
+									    		</td>
+											</tr>  
+											<% end %>
+										<% end %>
+										
+										<% @pagoda.each do |l| %>
+											<% if l.followed_by?(current_user) == true %>
+											<tr>
+										  	  <% name = ["해커스","파고다","와이비엠","영단기"] %>
+										      <% loc = ["강남", "종로","신촌"] %>
+										      <% subject = ["토플", "토익", "토스"] %>
+										      <% week = ["주 5일반", "월수금반", "화목금반", "주말반"] %>
+										      <% time = ["아침", "오전", "오후", "저녁"] %>
+												
+												<td><%= subject[l.subject-1] %></td>
+												<td><%= name[l.name-1] %><br>(<%= loc[l.loc-1] %>) </td>
+												<td><%= l.day %><br>(<%= week[l.week-1] %>) </td>
+												<td><a href="http://m.pagoda21.com/speaker/detail/<%= l.link %>?popup=Y" target="_blank" class="lecture_go"><%= l.title %><i class="fa fa-search lecture_go_icon yy" aria-hidden="true"></i></a></td>
+												<td><%= l.teacher %></td>
+												<td><%= l.price %></td>
+									    		<td>
+									    			<% if current_user %>
+														<% if l.followed_by?(current_user) == true %>
+															<%= link_to image_tag("/assets/zzim_ok.gif"),   {:type => "pagoda_unwish", :lecture_id => l.id}, {:class => 'zzim zzimok'}  %>
+														<% else %>
+															<%= link_to image_tag("/assets/zzim_not.gif"),   {:type => "pagoda_wish", :lecture_id => l.id}, {:class => 'zzim zzimnot'} %>
+														<% end %>
+													<% else %>
+														<a href="#" data-toggle="modal" data-target="#layerpop"><img class="zzim" src="/assets/zzim_not.gif"></div></a>
+													<% end %>
+									    		</td>
+											</tr>  
+											<% end %>
+										<% end %>
+										
+										<% @young.each do |l| %>
+    							    	<% if l.followed_by?(current_user) == true %>	
+										<tr>
+										  <% name = ["해커스","와이비엠","파고다","영단기"] %>
+									      <% loc = ["강남", "종로"] %>
+									      <% subject = ["토플", "토익", "토스"] %>
+									      <% week = ["주 5일반", "월수금반", "화목금반", "주말반"] %>
+									      <% time = ["아침", "오전", "오후", "저녁"] %>
+											
+											<td><%= subject[l.subject-1] %></td>
+											<td><%= name[l.name-1] %><br>(<%= loc[l.loc-1] %>) </td>
+											<td><%= l.day %><br>(<%= week[l.week-1] %>) </td>
+											<td><a href="http://offeng.dangi.co.kr/m/registration/main/view?saleinfo_id=<%= l.link %>" target="_blank" class="lecture_go"><%= l.title %><i class="fa fa-search lecture_go_icon yy" aria-hidden="true"></i></a></td>
+											<td><%= l.teacher %></td>
+											<td><%= l.price %></td>
+								    		<td>
+								    			<% if current_user %>
+													<% if l.followed_by?(current_user) == true %>
+														<%= link_to image_tag("/assets/zzim_ok.gif"),   {:type => "young_unwish", :lecture_id => l.id}, {:class => 'zzim zzimok'}  %>
+													<% else %>
+														<%= link_to image_tag("/assets/zzim_not.gif"),   {:type => "young_wish", :lecture_id => l.id}, {:class => 'zzim zzimnot'} %>
+													<% end %>
+												<% else %>
+													<a href="#" data-toggle="modal" data-target="#layerpop"><img class="zzim" src="/assets/zzim_not.gif"></div></a>
+												<% end %>
+								    		</td>
+									      </tr> 
+									    <% end %>
+										<% end %>
+										
+										<% end %>
+								    </tbody>
+									</table>
+					</div>
+				</div><!-- .htlfndr-user-tabs-4-->
+				
+				<div class="htlfndr-user-panel col-md-8 col-sm-8 htlfndr-setting-page" id="htlfndr-user-tab-3">
+					<div class="htlfndr-setting" style = "display: inlne-block;">
+						<h2>Change <b>Personal Infomation</b></h2>
+							<div class="row2">
+								<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+								<%= f.error_notification %>
+									
+									<div class="form-inputs">
+									  	
+									  	<div class="col-md-6 htlfndr-form-setting-cols">
+										    <div class = "user_field">
+										    Username
+										    <%= f.text_field :username, :class => "htlfndr-input" , value:current_user.username%><br/>
+										    </div>
+										    
+										    <div class = "user_field">
+										    Password(선택)
+										    <%= f.password_field :password, :class => "htlfndr-input", required: false%><br/> 
+										    </div>
+										    
+										    <div class = "user_field">
+										    Password Confirmation(선택)
+										    <%= f.password_field :password_confirmation, :class => "htlfndr-input", required: false%><br/>
+										    </div>
+										    
+										    <div class = "user_field">
+										    Current Password(필수입력)
+										    <%= f.password_field :current_password, :class => "htlfndr-input", required: true %><br/>
+										    </div>
+								 		</div>
+									    
+									    <div class="col-md-6 htlfndr-form-setting-cols">
+										    <div class = "user_field">
+										    TOEIC
+										    <%= f.text_field :toeic_score, :class => "htlfndr-input", required: false , value:current_user.toeic_score %><br/>
+										    </div>
+										    
+										    <div class = "user_field">
+										    TOEFL
+										    <%= f.text_field :toefl_score, :class => "htlfndr-input", required: false, value:current_user.toefl_score %><br/>
+										    </div>
+										    
+										    <div class = "user_field">
+										    TEPS
+										    <%= f.text_field :teps_score, :class => "htlfndr-input", required: false, value:current_user.teps_score %><br/>
+										    </div>
+										    
+										    <div class = "user_field">
+										    TOEIC Spaeking
+										    <%= f.text_field :tos_level, :class => "htlfndr-input", required: false, value:current_user.tos_level %><br/>
+										    </div>
+									</div>
+									
+								<div class="col-md-12 form-actions">
+								<%= f.button :submit, "Update", :class => "btn-primary"  %>
+								</div>
+								<hr>
+							</div>
+								
+								
+								
+								<h2>Cancel <b>Account</b></h2>	
+								<div class = "col-md-12 cancle">
+								<%= link_to "CANCLE MY ACCOUNT", registration_path(resource_name), data: { confirm: "Are you sure?" },
+								method: :delete, :class => "cancle_account" %>
+								<%#= link_to "Back", :back %>	
+								</div>
+						<% end %>
+					</div>
+				</div>
+						
+					</div><!--.htlfndr-setting -->
+				</div><!-- .htlfndr-user-tabs-5 -->
+				
+			
+			</div> <!-- .row -->
+		</main><!-- #htlfndr-main-content -->
+	</div><!-- .container -->
+	<!-- End of main content -->
+
+
+
+
+<script>	
+		 $(".zzimok").click(function() {
+		 	sweetAlert({   title: "찜목록에서 삭제되었습니다!", imageUrl: "/assets/zzim_not.gif", timer: 2000,   showConfirmButton: false, customClass: 'sweet' });
+		 });
+</script>

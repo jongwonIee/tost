@@ -1,0 +1,274 @@
+<!-- Overlay preloader-->
+		<div class="htlfndr-loader-overlay"></div>
+				
+			<section class="htlfndr-slider-section">
+				<div class="vertical-container">
+					<div class="index_top">
+						<div class="logo_img">
+							<img src="/assets/tost_logo.gif" alt="Logo" />
+						</div>	
+								<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="index_nav">
+									<!-- List with sing up/sing in links -->
+							<ul>
+								<% if current_user %> <!--로그인 한경우 -->
+									<li id="htlfndr-singin-link">
+										<a href="/home/index">
+											<span onclick="DoNav('/index')">HOME</span></a>
+									</li>
+									
+									<li id="htlfndr-singin-link">
+										<a href="/home/user_page">
+											<span onclick="DoNav('/user_page')">마이페이지</span></a>
+									</li>
+									
+									<li id="htlfndr-singin-link">
+										<a href="/home/about">
+											<span onclick="DoNav('/about')">ABOUT</span></a>
+									</li>
+			
+									<li id="htlfndr-singin-link">
+										<a href="/users/sign_out">
+											<span onclick="DoNav('/users/sign_out')">로그아웃</span></a>
+									</li>
+									
+								<% else %> <!--로그인 안한경우 -->
+									<li id="htlfndr-singin-link">
+										<a href="/home/index">
+											<span onclick="DoNav('/index')">HOME</span></a>
+									</li>
+									<li id="htlfndr-singin-link">
+										<a href="#" data-toggle="modal" data-target="#layerpop"><span>로그인</span></a>
+									</li>
+									
+									<li id="htlfndr-singup-link">
+										<a href="/users/sign_up">
+											<span onclick="DoNav('/users/sign_up')">회원가입</span></a>
+									</li>
+									
+									<li id="htlfndr-singin-link">
+										<a href="/home/about">
+											<span onclick="DoNav('/about')">ABOUT</span></a>
+									</li>
+									
+								<% end %>
+							</ul><!-- .htlfndr-singup-block -->					
+						</div><!-- .collapse.navbar-collapse -->	
+					</div>	
+				</div>
+			</section>			
+				<!-- Start of slider section -->
+				<section class="htlfndr-slider-section">
+					
+					<div class="owl-carousel">
+						<div class="htlfndr-slide-wrapper">
+							<img src="/assets/slide1.png" alt="img-1" />
+						</div><!-- .htlfndr-slide-wrapper-->
+						<div class="htlfndr-slide-wrapper">
+							<img src="/assets/slide3.png" alt="img-2" />
+						</div><!-- .htlfndr-slide-wrapper-->
+						<div class="htlfndr-slide-wrapper">
+							<img src="/assets/slide2.png" alt="img-3" />
+						</div><!-- .htlfndr-slide-wrapper-->
+					</div>
+				</section><!-- .htlfndr-slider-section -->
+				<!-- End of slider section -->
+
+			<!-- Start of main content -->
+			<main role="main">
+				<!--<img src="/assets/logo-ver2.2.gif" alt="Logo" />-->
+				
+				<!-- Section with popular destinations -->
+			<form action="/home/index">
+				<section class="container htlfndr-top-destinations">
+					<h2 class="htlfndr-section-title"></h2>
+					
+						<div class="search search_1 search_margin">
+							<p class="search_1_name">과목군</p>
+							<p class="search_select_1">
+								<label class="search_select_label">
+								<input type="checkbox" name="option_1" value="1"></input>
+								토익</label>
+							</p>
+							<p class="search_select_1">
+								<label class="search_select_label">
+								<input type="checkbox" name="option_1" value="1"></input>
+								토익스피킹</label>
+							</p>
+							<p class="search_select_1">
+								<label class="search_select_label">
+								<input type="checkbox" name="option_1" value="1"></input>
+								토플</label>
+							</p>
+						</div>
+						
+						<div class="search search_2 search_margin">
+							<p class="search_2_name">레벨</p>
+							<p class="search_select_2">
+								<label class="search_select_label">
+								<input type="checkbox" name="option_1" value="1"></input>
+								상</label>
+								<i class="fa fa-question-circle q-pop" aria-hidden="true"><span>토익 900점대<br>토익 900점대<br>토익 900점대</span></i>
+							</p>
+							<p class="search_select_2">
+								<label class="search_select_label">
+								<input type="checkbox" name="option_1" value="1"></input>
+								중</label>
+								<i class="fa fa-question-circle q-pop" aria-hidden="true"><span>토익 800점대<br>토익 900점대<br>토익 900점대</span></i>
+							</p>
+							<p class="search_select_2">
+								<label class="search_select_label">
+								<input type="checkbox" name="option_1" value="1"></input>
+								하</label>
+								<i class="fa fa-question-circle q-pop" aria-hidden="true"><span>토익 700점대<br>토익 900점대<br>토익 900점대</span></i>
+							</p>
+						</div>
+						
+						<div class="search search_3 search_margin">
+							<p class="search_3_name">위치</p>
+							<p class="search_select_3">
+								<label class="search_select_label">
+								<input type="checkbox" name="option_1" value="1"></input>
+								강남</label>
+							</p>
+							<p class="search_select_3">
+								<label class="search_select_label">
+								<input type="checkbox" name="option_1" value="1"></input>
+								종로</label>
+							</p>
+							<p class="search_select_3">
+								<label class="search_select_label">
+								<input type="checkbox" name="option_1" value="1"></input>
+								신촌</label>
+							</p>
+						</div>
+						
+						<div class="search search_4">
+							<p class="search_4_name">요일</p>
+							<p class="search_select_4">
+								<label class="search_select_label">
+								<input type="checkbox" name="option_1" value="1"></input>
+								주5일</label>
+							</p>
+							<p class="search_select_4">
+								<label class="search_select_label">
+								<input type="checkbox" name="option_1" value="1"></input>
+								월수금</label>
+							</p>
+							<p class="search_select_4">
+								<label class="search_select_label">
+								<input type="checkbox" name="option_1" value="1"></input>
+								화목금</label>
+							</p>
+							<p class="search_select_4">
+								<label class="search_select_label">
+								<input type="checkbox" name="option_1" value="1"></input>
+								주말</label>
+							</p>
+						</div>
+					
+					<div class="search_submit">
+						<button class="search_submit_btn">검색<span class="fa fa-search" aria-hidden="true"></span></button>
+					</div>
+				</form>
+					<div>
+						<table class="result_table">
+								<colgroup>
+							      <col width="7%">
+							      <col width="7%">
+							      <col width="23%">
+							      <col width="30%">
+							      <col width="13%">
+							      <col width="10%">
+							      <col width="10%">
+							    </colgroup>
+							    <thead>
+							    <tr>
+							        <th scope="cols">과목군</th>
+							        <th scope="cols">위치(학원)</th>
+							        <th scope="cols">시간</th>
+							        <th scope="cols">강의명</th>
+							        <th scope="cols">강사</th>
+							        <th scope="cols">가격</th>
+							        <th scope="cols">찜</th>
+							    </tr>
+							    </thead>
+							    
+							    <tbody>
+							    	<% @hackers.each do |l| %>
+										<tr>
+											<% name = ["해커스"] %>
+									      <% loc = ["강남", "종로"] %>
+									      <% subject = ["토플", "토익", "토스"] %>
+										  <%if l.subject == 1 %>
+									      <% level = ["기초","필수","입문","기본","중급/중급문풀","정규","실전"] %>
+									 	  <%elsif l.subject == 2 %>
+									      <% level = ["기초","필수","입문","기본","중급","정규","실전"] %>
+										  <%elsif l.subject == 3 %>
+									      <% level = ["기초","필수","입문","기본","중급","정규","실전"] %>
+									      <%end%>
+									      <% week = ["주 5일반", "월수금반", "화목금반", "주말반"] %>
+									      <% time = ["아침", "오전", "오후", "저녁"] %>
+											
+											<td><%= subject[l.subject-1] %></td>
+											<td><%= name[l.name-1] %><br>(<%= loc[l.loc-1] %>) </td>
+											<td><%= l.day %><br>(<%= week[l.week-1] %>) </td>
+											<td><a href="http://www.hackers.ac<%= l.link %>" target="_blank"><%= l.title %></a></td>
+											<td><%= l.teacher %></td>
+											<td><%= l.price %></td>
+								    		<td>
+								    			<% if current_user %>
+													<% if l.followed_by?(current_user) == true %>
+														<%= link_to image_tag("/assets/zzim_ok.gif"),   {:type => "unwish", :lecture_id => l.id}, {:class => 'zzim zzimok'}  %>
+													<% else %>
+														<%= link_to image_tag("/assets/zzim_not.gif"),   {:type => "wish", :lecture_id => l.id}, {:class => 'zzim zzimnot'} %>
+													<% end %>
+												<% else %>
+													<a href="#" data-toggle="modal" data-target="#layerpop"><img class="zzim" src="/assets/zzim_not.gif"></div></a>
+												<% end %>
+								    		</td>
+										</tr>   
+									<% end %>
+							    </tbody>
+							</table>
+					</div>
+								
+				</section><!-- .container.htlfndr-top-destinations -->
+				
+				
+
+					   
+	
+
+		<!--로그인 끝-->
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<!--<script src="/assets/jquery-1.11.3.min.js"></script>-->
+		<!-- Include Jquery UI script file -->
+		<!--<script src="/assets/jquery-ui.min.js"></script>-->
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<!-- Include Query UI Touch Punch is a small hack that enables the use
+		<!-- of touch events on sites using the jQuery UI user interface library. -->
+		<!--<script src="/assets/jquery.ui.touch-punch.min.js"></script>-->
+		<!--<script src="/assets/bootstrap.min.js"></script>-->
+		<!-- Include Owl Carousel script file -->
+		<!--<script src="/assets/owl.carousel.min.js"></script>-->
+		<!-- Include main script file -->
+		<!--script src="/assets/script.js"></script> -->
+
+		<!--<script src="js/less.min.js" ></script> -->
+
+
+<style>
+	.htlfndr-wrapper { display: none; }
+</style>
+
+<script>		
+		 $(".zzimnot").click(function() {
+		 	sweetAlert({   title: "찜목록에 추가되었습니다!",   text: "마이페이지에서 확인하세요.",   imageUrl: "/assets/zzim_ok.gif", timer: 2000,   showConfirmButton: false, customClass: 'sweet' });
+		 });
+		 
+		 $(".zzimok").click(function() {
+		 	sweetAlert({   title: "찜목록에서 삭제되었습니다!", imageUrl: "/assets/zzim_not.gif", timer: 2000,   showConfirmButton: false, customClass: 'sweet' });
+		 });
+</script>
