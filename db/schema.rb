@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -22,17 +21,16 @@ ActiveRecord::Schema.define(version: 20160902043344) do
   end
 
   create_table "follows", force: :cascade do |t|
-    t.integer  "followable_id",                   null: false
     t.string   "followable_type",                 null: false
-    t.integer  "follower_id",                     null: false
+    t.integer  "followable_id",                   null: false
     t.string   "follower_type",                   null: false
+    t.integer  "follower_id",                     null: false
     t.boolean  "blocked",         default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["followable_id", "followable_type"], name: "fk_followables"
+    t.index ["follower_id", "follower_type"], name: "fk_follows"
   end
-
-  add_index "follows", ["followable_id", "followable_type"], name: "fk_followables"
-  add_index "follows", ["follower_id", "follower_type"], name: "fk_follows"
 
   create_table "hackers", force: :cascade do |t|
     t.string   "day"
@@ -85,11 +83,10 @@ ActiveRecord::Schema.define(version: 20160902043344) do
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
     t.string   "toeic_socre"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["toeic_socre"], name: "index_users_on_toeic_socre", unique: true
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["toeic_socre"], name: "index_users_on_toeic_socre", unique: true
 
   create_table "youngs", force: :cascade do |t|
     t.string   "day"
