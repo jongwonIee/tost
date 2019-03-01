@@ -1,8 +1,3 @@
-collects and shows Korean academies lecture information
-
-model methods
-Hacker.toefl; Hacker.toeic; Hacker.toes; Pagoda.toefl; Pagoda.toeic; Pagoda.toes; Young.young
-
 TOST
 
 영어학원 모든 수업을 모았다!
@@ -14,3 +9,5 @@ TOST
 만든이: 이종원, 이지연, 조성국, 정유진, 박찬준
 
 http://tostenglish.herokuapp.com/
+
+collects and shows Korean academies lecture information
